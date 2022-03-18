@@ -16,9 +16,6 @@ public class Employee extends Humain {
       String m_job;
       int m_IDEmployee =-1 ;
     
-    
-    
-    
     public Employee (String name , String Password , String job  )
     {
         //create object for customer who are connected 
