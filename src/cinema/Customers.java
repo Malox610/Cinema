@@ -63,5 +63,8 @@ public class Customers extends Humain
        this.m_password = password;
     }
 
-    
+     int getID()
+    {
+    return m_IdCustomers;
+    }
 }
