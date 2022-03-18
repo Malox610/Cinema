@@ -9,11 +9,9 @@ package cinema;
  *
  * @author esmil
  */
-abstract public class Humain {
+public interface CustomersDAO {
     
-  protected String m_name ;
-  protected String m_password;
-  
-  
+     public Customers getCustomers(int id);
+    public void addCustomers(Customers cust);
     
 }

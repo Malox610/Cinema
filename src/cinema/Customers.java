@@ -41,6 +41,7 @@ public class Customers extends Humain
     {
     return m_email;
     }
+     
     
     int getAge()
     {
@@ -50,6 +51,11 @@ public class Customers extends Humain
     String getName()
     {
         return this.m_name;
+    }
+    
+    String getPassword()
+    {
+    return this.m_password;
     }
     
     public void setPassword(String password) 
