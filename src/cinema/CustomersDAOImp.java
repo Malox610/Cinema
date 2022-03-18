@@ -20,17 +20,18 @@ public class CustomersDAOImp implements CustomersDAO{
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("select * from Customers where id = " + id);
-            while (result.next()) {            // String name , String Password , String email , int age
+            while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
                 Customers cust =new Customers(result.getString(2) ,result.getString(2) , result.getString(3) , result.getInt(8));
                 
                 return cust;
                 
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return new Customers();
     }
+      @Override
        public void addCustomers(Customers cust)
     {
         Connection con = null;
@@ -53,6 +54,24 @@ public class CustomersDAOImp implements CustomersDAO{
             
             System.out.println("rows=" + rows);
           //  S1Project.patientList.add(pat);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+       
+         public void modifCustomer(Customers cust)
+    {
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            String sqlStatement = "UPDATE patient " +
+                      "SET Password='" + cust.getPassword()+
+                      " WHERE " +
+                      "ID_customers='" + cust.getID() + "'";
+            int rows = stmt.executeUpdate(sqlStatement);
+            System.out.println("rows=" + rows);
         } catch (Exception e) {
             System.out.println(e);
         }
