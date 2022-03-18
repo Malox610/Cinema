@@ -23,11 +23,11 @@ public class Customers extends Humain
     
     }
     
-    public Customers(String nom , String Password , String email , int age )
+    public Customers(String name , String Password , String email , int age )
     {
         //create object for customer who are connected 
         
-        this.m_nom= nom ;
+        this.m_name= name ;
         this.m_password=Password;
         m_email = email ;
         m_age= age ;
@@ -37,8 +37,25 @@ public class Customers extends Humain
                 
     }
     
+    String getEmail()
+    {
+    return m_email;
+    }
     
+    int getAge()
+    {
+        return m_age;
+    }
     
+    String getName()
+    {
+        return this.m_name;
+    }
     
+    public void setPassword(String password) 
+    {
+       this.m_password = password;
+    }
+
     
 }
