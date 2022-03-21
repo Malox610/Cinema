@@ -103,6 +103,7 @@ public class PaymentPage extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
         BackButton.setVisible(false);
+        ///prout
     }//GEN-LAST:event_BackButtonActionPerformed
 
     /**
