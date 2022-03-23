@@ -73,30 +73,45 @@ public class Menu_Employee extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Add show", jTabbedPane2);
 
+        jTabbedPane3.setBackground(new java.awt.Color(0, 0, 0));
+
+        jInternalFrame3.setBackground(new java.awt.Color(0, 0, 0));
         jInternalFrame3.setVisible(true);
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(240, 240, 0));
         jLabel14.setText("Title : ");
 
         jTextField6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(240, 240, 0));
         jButton3.setText("Add movie");
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel19.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel19.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(240, 240, 0));
         jLabel19.setText("Director : ");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(240, 240, 0));
         jLabel15.setText("Year of release : ");
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel17.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(240, 240, 0));
         jLabel17.setText("Running time : ");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel18.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel18.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(240, 240, 0));
         jLabel18.setText("Synopsis : ");
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -120,7 +135,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addComponent(jLabel18))
                     .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jInternalFrame3Layout.createSequentialGroup()
@@ -166,30 +181,43 @@ public class Menu_Employee extends javax.swing.JFrame {
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(75, 75, 75)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("", jInternalFrame3);
 
         jTabbedPane1.addTab("Add movie", jTabbedPane3);
 
+        jInternalFrame1.setBackground(new java.awt.Color(0, 0, 0));
         jInternalFrame1.setVisible(true);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 240, 0));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 0));
         jLabel2.setText("New price :");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 240, 0));
         jLabel3.setText("Old price : ");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 240, 0));
         jLabel4.setText("€");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(240, 240, 0));
         jLabel5.setText("€");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(240, 240, 0));
         jButton1.setText("Change price");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,16 +225,24 @@ public class Menu_Employee extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 240, 0));
         jLabel6.setText("Old promo : ");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 240, 0));
         jLabel7.setText("€");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 240, 0));
         jLabel8.setText("pri");
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(240, 240, 0));
         jButton2.setText("Change price");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,19 +250,29 @@ public class Menu_Employee extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 240, 0));
         jLabel10.setText("pri");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(240, 240, 0));
         jLabel11.setText("New promo : ");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel12.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(240, 240, 0));
         jLabel12.setText("€");
+
+        jSeparator1.setForeground(new java.awt.Color(240, 240, 0));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Senior", "Adults", "Students", "Children", " " }));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel13.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(240, 240, 0));
         jLabel13.setText("Categories : ");
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -234,7 +280,7 @@ public class Menu_Employee extends javax.swing.JFrame {
         jInternalFrame1Layout.setHorizontalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                .addGap(107, 266, Short.MAX_VALUE)
+                .addGap(107, 322, Short.MAX_VALUE)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addGap(277, 277, 277)
@@ -321,7 +367,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("", jInternalFrame1);

@@ -37,21 +37,36 @@ public class EmployeeConnexion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(240, 240, 0));
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 800));
 
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 240, 0));
         jLabel1.setText("Enter your Login and Password");
 
+        LoginTextBox.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        LoginTextBox.setForeground(new java.awt.Color(240, 240, 0));
         LoginTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginTextBoxActionPerformed(evt);
             }
         });
 
+        PasswordBox.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        PasswordBox.setForeground(new java.awt.Color(240, 240, 0));
+
+        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 0));
         jLabel2.setText("Login :");
 
+        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 240, 0));
         jLabel3.setText("Password:");
 
+        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(240, 240, 0));
         jButton1.setText("Sign in");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +95,7 @@ public class EmployeeConnexion extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(11, 11, 11)
                                 .addComponent(jButton1)))))
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addContainerGap(449, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
