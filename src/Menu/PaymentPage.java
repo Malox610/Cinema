@@ -38,7 +38,6 @@ public class PaymentPage extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(240, 240, 0));
         jButton1.setText("Payment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,7 +47,6 @@ public class PaymentPage extends javax.swing.JFrame {
 
         BackButton.setBackground(new java.awt.Color(51, 51, 51));
         BackButton.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        BackButton.setForeground(new java.awt.Color(240, 240, 0));
         BackButton.setText("Back");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

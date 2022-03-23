@@ -36,8 +36,7 @@ public class MoviePage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         Next.setBackground(new java.awt.Color(0, 0, 0));
-        Next.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
-        Next.setForeground(new java.awt.Color(240, 240, 0));
+        Next.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         Next.setText("Next");
         Next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,8 +45,7 @@ public class MoviePage extends javax.swing.JFrame {
         });
 
         BackButton.setBackground(new java.awt.Color(0, 0, 0));
-        BackButton.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
-        BackButton.setForeground(new java.awt.Color(240, 240, 0));
+        BackButton.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,20 +58,20 @@ public class MoviePage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(523, Short.MAX_VALUE)
+                .addContainerGap(537, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(463, 463, 463))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 478, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
+                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 455, Short.MAX_VALUE)
                 .addComponent(Next)
                 .addGap(49, 49, 49))
         );

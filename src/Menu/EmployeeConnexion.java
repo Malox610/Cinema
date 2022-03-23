@@ -42,12 +42,11 @@ public class EmployeeConnexion extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 240, 0));
         jLabel1.setText("Enter your Login and Password");
 
         LoginTextBox.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        LoginTextBox.setForeground(new java.awt.Color(240, 240, 0));
         LoginTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginTextBoxActionPerformed(evt);
@@ -55,13 +54,17 @@ public class EmployeeConnexion extends javax.swing.JFrame {
         });
 
         PasswordBox.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        PasswordBox.setForeground(new java.awt.Color(240, 240, 0));
+        PasswordBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordBoxActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 240, 0));
         jLabel2.setText("Login :");
 
-        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 0));
         jLabel3.setText("Password:");
 
@@ -81,39 +84,39 @@ public class EmployeeConnexion extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(546, 546, 546)
+                        .addGap(447, 447, 447)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LoginTextBox, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(PasswordBox)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(351, 351, 351)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(493, 493, 493)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PasswordBox)
-                            .addComponent(LoginTextBox)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(jButton1)))))
-                .addContainerGap(449, Short.MAX_VALUE))
+                        .addGap(538, 538, 538)
+                        .addComponent(jButton1)))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(274, 274, 274)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel1)
+                .addGap(67, 67, 67)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
+                    .addComponent(LoginTextBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(66, 66, 66)
+                        .addComponent(jLabel2)
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LoginTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addComponent(PasswordBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(86, 86, 86)
+                            .addComponent(jLabel3)
+                            .addComponent(PasswordBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(56, 56, 56)
                 .addComponent(jButton1)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addContainerGap(496, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,6 +145,10 @@ public class EmployeeConnexion extends javax.swing.JFrame {
         System.out.println("hello");
         this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordBoxActionPerformed
 
     /**
      * @param args the command line arguments
