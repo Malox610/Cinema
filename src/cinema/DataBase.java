@@ -11,6 +11,7 @@ import java.sql.*;
  * @author esmil
  */
 public class DataBase {
+    //classe pour charger le driver
     
      Connection con = null;
  
@@ -19,7 +20,7 @@ public class DataBase {
     {
         try
         {
-            String URL = "jdbc:mysql://localhost:3306/project";
+            String URL = "jdbc:mysql://localhost:3306/cinebdd";
             String login = "root";
             String password = "";
             con=DriverManager.getConnection(URL, login, password);
