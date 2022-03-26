@@ -186,9 +186,9 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addGap(34, 34, 34)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(37, 37, 37))
         );
 
         jLabel1.getAccessibleContext().setAccessibleName("CreationCompte");

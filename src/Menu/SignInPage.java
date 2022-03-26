@@ -55,7 +55,7 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 240, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Créer un compte");
+        jLabel1.setText("SE Connecter");
 
         jTextField1.setText("Email");
 
@@ -71,7 +71,7 @@ public class SignInPage extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(240, 240, 0));
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Créer");
+        jButton1.setText("Connecter");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -97,7 +97,7 @@ public class SignInPage extends javax.swing.JFrame {
                         .addComponent(jButton3)
                         .addGap(286, 286, 286)
                         .addComponent(jLabel1)))
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addContainerGap(385, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
