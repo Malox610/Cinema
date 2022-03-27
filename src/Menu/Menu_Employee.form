@@ -523,8 +523,6 @@
                                               <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                          <Component id="jButton4" min="-2" pref="44" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -550,10 +548,11 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Component id="jButton1" min="-2" pref="67" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <Component id="jButton4" min="-2" pref="44" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -967,7 +966,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Showcard Gothic" size="18" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="BACK"/>
+                    <Property name="text" type="java.lang.String" value="jButton5"/>
                   </Properties>
                 </Component>
               </SubComponents>
