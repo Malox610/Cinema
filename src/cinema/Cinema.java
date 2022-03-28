@@ -5,6 +5,8 @@
  */
 package cinema;
 
+import Menu.WelcomePage;
+
 /**
  *
  * @author esmil
@@ -16,6 +18,8 @@ public class Cinema {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+             WelcomePage a =new WelcomePage();
+       a.setVisible(true);
     }
     
 }
