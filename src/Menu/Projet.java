@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cinema;
-
-import Menu.*;
-import java.util.*;
+package Menu;
+import cinema.*;
 
 /**
  *
  * @author esmil
  */
-public class Cinema {
-    public static ArrayList<Films> listeFilm =new ArrayList<>();
-    public static ArrayList<Customers> custList =new ArrayList<>();
-    
+public class Projet {
+     public static int connectid = 0;
+     
     public static void main(String[] args) {
         // TODO code application logic here
-             WelcomePage a =new WelcomePage();
-             a.setVisible(true);
-    }
+       
+        Cinema c = new Cinema();
+        WelcomePage g =new WelcomePage();
+        g.setVisible(true);
     
+    }
 }

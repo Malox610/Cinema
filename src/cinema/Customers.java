@@ -37,33 +37,33 @@ public class Customers extends Humain
                 
     }
     
-    String getEmail()
+   public String getEmail()
     {
     return m_email;
     }
      
     
-    int getAge()
+   public  int getAge()
     {
         return m_age;
     }
     
-    String getName()
+  public  String getName()
     {
         return this.m_name;
     }
     
-    String getPassword()
+    public String getPassword()
     {
     return this.m_password;
     }
     
-    public void setPassword(String password) 
+ public void setPassword(String password) 
     {
        this.m_password = password;
     }
 
-     int getID()
+   public  int getID()
     {
     return m_IdCustomers;
     }

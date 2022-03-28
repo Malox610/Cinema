@@ -5,6 +5,8 @@
  */
 
 package Menu;
+import cinema.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,15 +30,15 @@ public class SignInPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        BackButtonName = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Mail = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        ConnexionButton = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        CreerComptePassword = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -45,12 +47,12 @@ public class SignInPage extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton3.setText("Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BackButtonName.setBackground(new java.awt.Color(0, 0, 0));
+        BackButtonName.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        BackButtonName.setText("Back");
+        BackButtonName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BackButtonNameActionPerformed(evt);
             }
         });
 
@@ -59,7 +61,7 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SE Connecter");
 
-        jTextField1.setText("Email");
+        Mail.setText("Email");
 
         jLabel3.setBackground(new java.awt.Color(240, 240, 0));
         jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
@@ -71,12 +73,12 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("Email");
 
-        jButton1.setBackground(new java.awt.Color(240, 240, 0));
-        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Connecter");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ConnexionButton.setBackground(new java.awt.Color(240, 240, 0));
+        ConnexionButton.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        ConnexionButton.setText("Connecter");
+        ConnexionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ConnexionButtonActionPerformed(evt);
             }
         });
 
@@ -84,12 +86,12 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(240, 240, 0));
         jLabel4.setText("Vous n'avez pas encore de compte ?");
 
-        jButton2.setBackground(new java.awt.Color(240, 240, 0));
-        jButton2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jButton2.setText("Créer un compte");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        CreerComptePassword.setBackground(new java.awt.Color(240, 240, 0));
+        CreerComptePassword.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        CreerComptePassword.setText("Créer un compte");
+        CreerComptePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CreerComptePasswordActionPerformed(evt);
             }
         });
 
@@ -99,7 +101,7 @@ public class SignInPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(ConnexionButton)
                 .addGap(402, 402, 402))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,20 +111,20 @@ public class SignInPage extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Mail, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jButton3)
+                                .addComponent(BackButtonName)
                                 .addGap(286, 286, 286)
                                 .addComponent(jLabel1))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLabel4)
                         .addGap(26, 26, 26)
-                        .addComponent(jButton2)))
+                        .addComponent(CreerComptePassword)))
                 .addContainerGap(259, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -134,19 +136,19 @@ public class SignInPage extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(69, 69, 69)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
+                            .addComponent(Mail)
                             .addComponent(jLabel2))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton3))
+                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BackButtonName))
                 .addGap(55, 55, 55)
-                .addComponent(jButton1)
+                .addComponent(ConnexionButton)
                 .addGap(53, 53, 53)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton2))
+                    .addComponent(CreerComptePassword))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
@@ -183,17 +185,49 @@ public class SignInPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BackButtonNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BackButtonNameActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+        boolean conn = false;
+       String clienttmail = Mail.getText();
+       char[] clientpassword = password.getPassword();
+       String pass = "";
+       for(char c : clientpassword)
+       {
+           pass+=c;//rajoue du chiffrage
+       }
+       for(Customers s : Cinema.custList )
+       {
+           if(s.getEmail().equals(clientpassword))
+           {
+               if(s.getPassword().equals(pass))
+               {
+                   conn = true;
+                   Projet.connectid = s.getID();
+                   WelcomePage a = new WelcomePage();
+                   a.setVisible(true);
+               }
+           }
+       }
+       if(conn==false)
+       {
+          JOptionPane.showMessageDialog(null, "Wrong user/password"); 
+       }
+        
+        
+        this.setVisible(false);
+    }//GEN-LAST:event_ConnexionButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void CreerComptePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreerComptePasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+       SignUpPage a =new SignUpPage();
+       a.setVisible(true);
+       this.setVisible(false);
+    }//GEN-LAST:event_CreerComptePasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,17 +265,17 @@ public class SignInPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton BackButtonName;
+    private javax.swing.JButton ConnexionButton;
+    private javax.swing.JButton CreerComptePassword;
+    private javax.swing.JTextField Mail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
 
 }
