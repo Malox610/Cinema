@@ -176,9 +176,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="Mail">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MailActionPerformed"/>
-              </Events>
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>

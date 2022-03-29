@@ -7,7 +7,6 @@
 package Menu;
 import cinema.*;
 import javax.swing.JOptionPane;
-import java.util.*;
 
 /**
  *
@@ -18,9 +17,6 @@ public class SignInPage extends javax.swing.JFrame {
     /** Creates new form SignInPage */
     public SignInPage() {
         initComponents();
-       ArrayList<Customers> customers =new ArrayList<>();
-       customers=Cinema.custList;
-       System.out.print("");
     }
 
     /** This method is called from within the constructor to
@@ -65,11 +61,7 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SE Connecter");
 
-        Mail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MailActionPerformed(evt);
-            }
-        });
+        Mail.setText("Email");
 
         jLabel3.setBackground(new java.awt.Color(240, 240, 0));
         jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
@@ -201,7 +193,6 @@ public class SignInPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         boolean conn = false;
-      
        String clienttmail = Mail.getText();
        char[] clientpassword = password.getPassword();
        String pass = "";
@@ -209,20 +200,16 @@ public class SignInPage extends javax.swing.JFrame {
        {
            pass+=c;//rajoue du chiffrage
        }
-       
        for(Customers s : Cinema.custList )
        {
-           String mail = s.getEmail();
-           if(mail.equals(clienttmail))
+           if(s.getEmail().equals(clientpassword))
            {
                if(s.getPassword().equals(pass))
                {
                    conn = true;
                    Projet.connectid = s.getID();
-                   Cinema.cust=s;
                    WelcomePage a = new WelcomePage();
                    a.setVisible(true);
-                   this.setVisible(false);
                }
            }
        }
@@ -232,7 +219,7 @@ public class SignInPage extends javax.swing.JFrame {
        }
         
         
-       
+        this.setVisible(false);
     }//GEN-LAST:event_ConnexionButtonActionPerformed
 
     private void CreerComptePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreerComptePasswordActionPerformed
@@ -241,10 +228,6 @@ public class SignInPage extends javax.swing.JFrame {
        a.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_CreerComptePasswordActionPerformed
-
-    private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MailActionPerformed
 
     /**
      * @param args the command line arguments
