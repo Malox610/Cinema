@@ -238,8 +238,11 @@ public class SignUpPage extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(null, "This is not the same password"); 
          }
         }while(pass==pass2);
-        SecureRandom random = new SecureRandom();
-         int IdCustomers= random.nextInt(); 
+         int IdCustomers=-1;
+        do{ SecureRandom random = new SecureRandom();
+          IdCustomers= random.nextInt()/100000; 
+        }while(IdCustomers<0);
+       
         CustomersDAO cust = new CustomersDAOImp();
         cust.addCustomers(new Customers(newName ,pass , newMail , newAge , IdCustomers ));
         
