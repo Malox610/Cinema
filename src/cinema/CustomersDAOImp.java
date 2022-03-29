@@ -85,7 +85,7 @@ public class CustomersDAOImp implements CustomersDAO{
             String sqlStatement = "INSERT INTO customer " +
                       "(ID_customers ,name, email, password, age)" +
                       " VALUES " +
-                      "('" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + ")" ;
+                      "('"+cust.getID() + "','" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + ")" ;
             int rows = stmt.executeUpdate(sqlStatement);
             ResultSet result = stmt.executeQuery("select * from customer");
             while (result.next()) {
