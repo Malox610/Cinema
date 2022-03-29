@@ -15,9 +15,18 @@ import java.util.*;
 public class Cinema {
     public static ArrayList<Films> listeFilm =new ArrayList<>();
     public static ArrayList<Customers> custList =new ArrayList<>();
+    public static Customers cust =new Customers();
+    
+    public Cinema()
+    {
+        CustomersDAO cust = new CustomersDAOImp();
+        custList=cust.getCustomers();
+    }
+    
     
     public static void main(String[] args) {
         // TODO code application logic here
+            Cinema c =new Cinema();
              WelcomePage a =new WelcomePage();
              a.setVisible(true);
     }

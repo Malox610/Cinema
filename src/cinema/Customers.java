@@ -18,9 +18,7 @@ public class Customers extends Humain
     
     public Customers ()
     { //For guest 
-        SecureRandom random = new SecureRandom();
-         m_IdCustomers= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja 
-    
+         
     }
     
     public Customers(String name , String Password , String email , int age )

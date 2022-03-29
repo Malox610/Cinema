@@ -5,6 +5,7 @@
  */
 package cinema;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,14 +13,14 @@ import java.sql.*;
  */
 public class CustomersDAOImp implements CustomersDAO{
     
-      public Customers getCustomers(int id)
+      public Customers getCustomerId(int id)
     {
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from Customers where id = " + id);
+            ResultSet result = stmt.executeQuery("select * from customer where ID_customer = " + id);
             while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
                 Customers cust =new Customers(result.getString(2) ,result.getString(2) , result.getString(3) , result.getInt(8));
                 
@@ -31,6 +32,47 @@ public class CustomersDAOImp implements CustomersDAO{
         }
         return new Customers();
     }
+      public Customers getCustomersConnexion(String login , String password)
+    {
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("select * from customer where email = " + login+" and password = "+password);
+            while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
+                Customers cust =new Customers(result.getString(2) ,result.getString(2) , result.getString(3) , result.getInt(8));
+                
+                return cust;
+                
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return new Customers();
+    }
+      
+       public ArrayList<Customers> getCustomers()
+    {
+        ArrayList<Customers> custList= new ArrayList<>();
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("select * from customer");
+            
+            while (result.next()) {
+                Customers cust = new Customers(result.getString(2) ,result.getString(4) , result.getString(3) , result.getInt(5));
+                
+                custList.add(cust);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return custList;
+    }
+    
       @Override
        public void addCustomers(Customers cust)
     {
@@ -39,7 +81,7 @@ public class CustomersDAOImp implements CustomersDAO{
             DataBase dataSource = new DataBase();
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
-            String sqlStatement = "INSERT INTO Customers " +
+            String sqlStatement = "INSERT INTO customer " +
                       "(Name, Email, Password, age)" +
                       " VALUES " +
                       "('" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + ")" ;

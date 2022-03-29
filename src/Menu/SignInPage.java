@@ -7,6 +7,7 @@
 package Menu;
 import cinema.*;
 import javax.swing.JOptionPane;
+import java.util.*;
 
 /**
  *
@@ -193,6 +194,8 @@ public class SignInPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         boolean conn = false;
+       ArrayList<Customers> customers =new ArrayList<>();
+       customers=Cinema.custList;
        String clienttmail = Mail.getText();
        char[] clientpassword = password.getPassword();
        String pass = "";
@@ -200,14 +203,16 @@ public class SignInPage extends javax.swing.JFrame {
        {
            pass+=c;//rajoue du chiffrage
        }
+       
        for(Customers s : Cinema.custList )
        {
-           if(s.getEmail().equals(clientpassword))
+           if(s.getEmail() == pass)
            {
                if(s.getPassword().equals(pass))
                {
                    conn = true;
                    Projet.connectid = s.getID();
+                   Cinema.cust=s;
                    WelcomePage a = new WelcomePage();
                    a.setVisible(true);
                }
@@ -219,7 +224,7 @@ public class SignInPage extends javax.swing.JFrame {
        }
         
         
-        this.setVisible(false);
+       
     }//GEN-LAST:event_ConnexionButtonActionPerformed
 
     private void CreerComptePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreerComptePasswordActionPerformed

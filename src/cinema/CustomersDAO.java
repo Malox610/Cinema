@@ -5,13 +5,17 @@
  */
 package cinema;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author esmil
  */
 public interface CustomersDAO {
     
-     public Customers getCustomers(int id);
+     public Customers getCustomersConnexion(String login , String password);
+     public Customers getCustomerId(int id);
+      public ArrayList<Customers> getCustomers();
     public void addCustomers(Customers cust);
     
 }
