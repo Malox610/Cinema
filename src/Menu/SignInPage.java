@@ -18,6 +18,9 @@ public class SignInPage extends javax.swing.JFrame {
     /** Creates new form SignInPage */
     public SignInPage() {
         initComponents();
+       ArrayList<Customers> customers =new ArrayList<>();
+       customers=Cinema.custList;
+       System.out.print("");
     }
 
     /** This method is called from within the constructor to
@@ -62,7 +65,11 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SE Connecter");
 
-        Mail.setText("Email");
+        Mail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MailActionPerformed(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(240, 240, 0));
         jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
@@ -194,8 +201,7 @@ public class SignInPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         boolean conn = false;
-       ArrayList<Customers> customers =new ArrayList<>();
-       customers=Cinema.custList;
+      
        String clienttmail = Mail.getText();
        char[] clientpassword = password.getPassword();
        String pass = "";
@@ -206,7 +212,7 @@ public class SignInPage extends javax.swing.JFrame {
        
        for(Customers s : Cinema.custList )
        {
-           if(s.getEmail() == pass)
+           if(s.getEmail() ==clienttmail)
            {
                if(s.getPassword().equals(pass))
                {
@@ -233,6 +239,10 @@ public class SignInPage extends javax.swing.JFrame {
        a.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_CreerComptePasswordActionPerformed
+
+    private void MailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MailActionPerformed
 
     /**
      * @param args the command line arguments

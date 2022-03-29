@@ -21,7 +21,7 @@ public class Customers extends Humain
          
     }
     
-    public Customers(String name , String Password , String email , int age )
+    public Customers(String name , String Password , String email , int age , int id )
     {
         //create object for customer who are connected 
         
@@ -29,10 +29,11 @@ public class Customers extends Humain
         this.m_password=Password;
         m_email = email ;
         m_age= age ;
-         SecureRandom random = new SecureRandom();
+        m_IdCustomers= id;
+       /*  SecureRandom random = new SecureRandom();
          m_IdCustomers= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja 
         
-                
+                */
     }
     
    public String getEmail()

@@ -22,7 +22,7 @@ public class CustomersDAOImp implements CustomersDAO{
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("select * from customer where ID_customer = " + id);
             while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
-                Customers cust =new Customers(result.getString(2) ,result.getString(2) , result.getString(3) , result.getInt(8));
+                Customers cust =new Customers(result.getString(2) ,result.getString(4) , result.getString(3) , result.getInt(5),result.getInt(1));
                 
                 return cust;
                 
@@ -41,7 +41,7 @@ public class CustomersDAOImp implements CustomersDAO{
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("select * from customer where email = " + login+" and password = "+password);
             while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
-                Customers cust =new Customers(result.getString(2) ,result.getString(2) , result.getString(3) , result.getInt(8));
+                Customers cust =new Customers(result.getString(2) ,result.getString(4) , result.getString(3) , result.getInt(5),result.getInt(1));
                 
                 return cust;
                 
@@ -63,7 +63,7 @@ public class CustomersDAOImp implements CustomersDAO{
             ResultSet result = stmt.executeQuery("select * from customer");
             
             while (result.next()) {
-                Customers cust = new Customers(result.getString(2) ,result.getString(4) , result.getString(3) , result.getInt(5));
+                Customers cust = new Customers(result.getString(2) ,result.getString(4) , result.getString(3) , result.getInt(5),result.getInt(1));
                 
                 custList.add(cust);
             }
