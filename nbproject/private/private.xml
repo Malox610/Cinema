@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/FinalPage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/PaymentPage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/Menu_Employee.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/cinema/CustomersDAO.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/cinema/DataBase.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/MoviePage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/SignInPage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/cinema/Customers.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/SignUpPage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/ClientAccountPage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/EmployeeConnexion.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/cinema/Cinema.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/Menu/WelcomePage.java</file>
+            <file>file:/C:/Users/esmil/OneDrive/Documents/NetBeansProjects/Cinema/src/cinema/CustomersDAOImp.java</file>
+        </group>
     </open-files>
 </project-private>

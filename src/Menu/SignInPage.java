@@ -212,7 +212,8 @@ public class SignInPage extends javax.swing.JFrame {
        
        for(Customers s : Cinema.custList )
        {
-           if(s.getEmail() ==clienttmail)
+           String mail = s.getEmail();
+           if(mail.equals(clienttmail))
            {
                if(s.getPassword().equals(pass))
                {
@@ -221,6 +222,7 @@ public class SignInPage extends javax.swing.JFrame {
                    Cinema.cust=s;
                    WelcomePage a = new WelcomePage();
                    a.setVisible(true);
+                   this.setVisible(false);
                }
            }
        }
