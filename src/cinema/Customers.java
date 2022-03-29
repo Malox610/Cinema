@@ -57,7 +57,7 @@ public class Customers extends Humain
     return this.m_password;
     }
     
- public void setPassword(String password) 
+    public void setPassword(String password) 
     {
        this.m_password = password;
     }
@@ -66,4 +66,10 @@ public class Customers extends Humain
     {
     return m_IdCustomers;
     }
+   
+    public void setID(int id) 
+    {
+       this.m_IdCustomers = id;
+    }
+
 }

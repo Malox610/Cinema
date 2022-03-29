@@ -6,6 +6,7 @@
 package Menu;
 import cinema.*;
 import java.security.SecureRandom;   
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -232,13 +233,19 @@ public class SignUpPage extends javax.swing.JFrame {
             pass2+=c;
         }
          
-        }while(pass!=pass2);
+         if(pass.equals(pass2)==false)
+         {
+         JOptionPane.showMessageDialog(null, "This is not the same password"); 
+         }
+        }while(pass==pass2);
         SecureRandom random = new SecureRandom();
          int IdCustomers= random.nextInt(); 
         CustomersDAO cust = new CustomersDAOImp();
         cust.addCustomers(new Customers(newName ,pass , newMail , newAge , IdCustomers ));
         
-        
+        WelcomePage a =new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_SinUpbuttonActionPerformed
 
     private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed

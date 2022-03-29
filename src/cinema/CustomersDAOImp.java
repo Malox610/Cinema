@@ -73,6 +73,7 @@ public class CustomersDAOImp implements CustomersDAO{
         return custList;
     }
     
+      
       @Override
        public void addCustomers(Customers cust)
     {
@@ -82,15 +83,15 @@ public class CustomersDAOImp implements CustomersDAO{
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
             String sqlStatement = "INSERT INTO customer " +
-                      "(Name, Email, Password, age)" +
+                      "(ID_customers ,name, email, password, age)" +
                       " VALUES " +
                       "('" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + ")" ;
             int rows = stmt.executeUpdate(sqlStatement);
-            ResultSet result = stmt.executeQuery("select * from Csutomers");
+            ResultSet result = stmt.executeQuery("select * from customer");
             while (result.next()) {
-                if(result.getString(5).equals(cust.getEmail()))
+                if(result.getString(3).equals(cust.getEmail()))
                 {
-               ///     cust.setId(result.getInt(1));
+                    cust.setID(result.getInt(1));
                 }
             }
             
