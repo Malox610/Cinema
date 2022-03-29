@@ -240,7 +240,7 @@ public class SignUpPage extends javax.swing.JFrame {
         }while(pass==pass2);
          int IdCustomers=-1;
         do{ SecureRandom random = new SecureRandom();
-          IdCustomers= random.nextInt()/100000; 
+          IdCustomers= random.nextInt()/1000; 
         }while(IdCustomers<0);
        
         CustomersDAO cust = new CustomersDAOImp();

@@ -82,11 +82,9 @@ public class CustomersDAOImp implements CustomersDAO{
             DataBase dataSource = new DataBase();
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
-            String sqlStatement = "INSERT INTO `customer` " +
-                      "(`ID_customers` ,`name`, `email`, `password`, `age`)" +
-                      " VALUES " +
-                      "('"+cust.getID() + "','" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + "')" ;
-            int rows = stmt.executeUpdate(sqlStatement);
+            String sqlStatement = "INSERT INTO `customer`(`ID_customer`, `name`, `email`, `password`, `age`) VALUES ('"+cust.getID() + "','" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + "')" ;
+             stmt.executeUpdate(sqlStatement);
+            //int rows = stmt.executeUpdate(sqlStatement);
             ResultSet result = stmt.executeQuery("select * from customer");
             while (result.next()) {
                 if(result.getString(3).equals(cust.getEmail()))
@@ -95,7 +93,7 @@ public class CustomersDAOImp implements CustomersDAO{
                 }
             }
             
-            System.out.println("rows=" + rows);
+           // System.out.println("rows=" + rows);
           //  S1Project.patientList.add(pat);
         } catch (Exception e) {
             System.out.println(e);
