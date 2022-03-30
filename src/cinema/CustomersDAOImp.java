@@ -107,12 +107,12 @@ public class CustomersDAOImp implements CustomersDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            String sqlStatement = "UPDATE patient " +
-                      "SET Password='" + cust.getPassword()+
+            String sqlStatement = "UPDATE `customer` " +
+                      "SET password='" + cust.getPassword()+
                       " WHERE " +
-                      "ID_customers='" + cust.getID() + "'";
-            int rows = stmt.executeUpdate(sqlStatement);
-            System.out.println("rows=" + rows);
+                      "ID_customer='" + cust.getID() + "'";
+            stmt.executeUpdate(sqlStatement);
+          //  System.out.println("rows=" + rows);
         } catch (Exception e) {
             System.out.println(e);
         }
