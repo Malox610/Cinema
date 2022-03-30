@@ -17,7 +17,20 @@ public class WelcomePage extends javax.swing.JFrame {
      * Creates new form WelcomePage
      */
     public WelcomePage() {
+     
         initComponents();
+        AccountsSettingButton.setVisible(false);
+           ConnexionButton.setVisible(false);
+        if(Projet.connectid>0)
+        {
+        AccountsSettingButton.setVisible(true);
+        ConnexionButton.setVisible(false);
+        }
+        else
+        {
+        AccountsSettingButton.setVisible(false);
+        ConnexionButton.setVisible(true);
+        }
     }
 
     /**
@@ -31,10 +44,11 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        ConnexionButton = new javax.swing.JButton();
+        AccountsSettingButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         EmployeeConnexionButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        ConnexionButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -45,10 +59,10 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(240, 240, 0));
         jLabel2.setText("Pathé PARIS 15");
 
-        ConnexionButton.setText("Connexion");
-        ConnexionButton.addActionListener(new java.awt.event.ActionListener() {
+        AccountsSettingButton.setText("Accounts Setting");
+        AccountsSettingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConnexionButtonActionPerformed(evt);
+                AccountsSettingButtonActionPerformed(evt);
             }
         });
 
@@ -69,6 +83,13 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(200, 20, 0));
         jLabel1.setText("jLabel1");
 
+        ConnexionButton.setText("Connexion");
+        ConnexionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConnexionButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -80,9 +101,11 @@ public class WelcomePage extends javax.swing.JFrame {
                         .addComponent(EmployeeConnexionButton)
                         .addGap(58, 58, 58)
                         .addComponent(jLabel2)
-                        .addGap(88, 88, 88)
-                        .addComponent(ConnexionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))
+                        .addGap(93, 93, 93)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AccountsSettingButton, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                            .addComponent(ConnexionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(284, 284, 284))))
@@ -94,13 +117,19 @@ public class WelcomePage extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EmployeeConnexionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ConnexionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmployeeConnexionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(ConnexionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AccountsSettingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
@@ -125,13 +154,13 @@ public class WelcomePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionButtonActionPerformed
+    private void AccountsSettingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountsSettingButtonActionPerformed
         // TODO add your handling code here:
         
          SignInPage a= new SignInPage();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_ConnexionButtonActionPerformed
+    }//GEN-LAST:event_AccountsSettingButtonActionPerformed
 
     private void EmployeeConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployeeConnexionButtonActionPerformed
         // TODO add your handling code here:
@@ -146,6 +175,10 @@ public class WelcomePage extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void ConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConnexionButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +216,7 @@ public class WelcomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccountsSettingButton;
     private javax.swing.JButton ConnexionButton;
     private javax.swing.JButton EmployeeConnexionButton;
     private javax.swing.JButton jButton2;
