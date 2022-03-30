@@ -137,7 +137,7 @@ public class PaymentPage extends javax.swing.JFrame {
 
         jLabel10.setText("Adulte");
 
-        jLabel11.setText("Etudiant");
+        jLabel11.setText("Senior");
 
         jLabel12.setText("Prix");
 
@@ -200,11 +200,11 @@ public class PaymentPage extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGap(31, 31, 31)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGap(41, 41, 41)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(jPanel3Layout.createSequentialGroup()
                                                 .addComponent(jLabel8)
-                                                .addGap(22, 22, 22)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addGroup(jPanel3Layout.createSequentialGroup()
