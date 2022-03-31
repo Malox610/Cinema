@@ -214,21 +214,7 @@ public class SignInPage extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(null, "Wrong user/password"); 
        }
         }while(conn==false);
-       
-     /*  for(Customers s : Cinema.custList )
-       {
-           if(s.getEmail().equals(clientpassword))
-           {
-               if(s.getPassword().equals(pass))
-               {
-                   conn = true;
-                   Projet.connectid = s.getID();
-                   
-               }
-           }
-       }*/
-      
-        
+          
         WelcomePage a = new WelcomePage();
                    a.setVisible(true);
         this.setVisible(false);

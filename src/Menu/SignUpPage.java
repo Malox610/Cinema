@@ -237,10 +237,49 @@ public class SignUpPage extends javax.swing.JFrame {
         int IdCustomers = -1;
         do {
             SecureRandom random = new SecureRandom();
-            IdCustomers = random.nextInt() / 1000;
+            IdCustomers = random.nextInt(100000) ;
         } while (IdCustomers < 0);
+        
+        SecureRandom random2=new SecureRandom();
+        boolean randclé =random2.nextBoolean();
+        String Xclé="" ;
+        String Xclé2="" ;
+        if(randclé ==true)
+        {
+       Xclé2 ="1" ;
+        }
+       if(randclé ==true)
+        {
+       Xclé2 ="0" ;
+        }
+       int randclé2 =random2.nextInt(10);
+       Xclé=String.valueOf(randclé2);
+       pass=Xclé+Xclé2+pass;
+        char[] ch =pass.toString().toCharArray();
+         int clé = ch[0];
+        int clé2 =ch[1];
+       
+        System.out.println(clé);
+        
+        for(int j =2 ; j<ch.length ; j++)
+        {
+            if(clé2==49)
+            { 
+                ch[j] =(char)((int)ch[j]+clé); 
+            }else if(clé2==48)
+            {
+            ch[j] =(char)((int)ch[j]-clé); 
+            }
+          
+        System.out.println(ch[j]+ "-->"+(int)ch[j]);
+        }
+        String chiffre ="";
+      for(char c : ch)
+       {
+           chiffre+=c;//rajoue du chiffrage
+       }
         CustomersDAO cust = new CustomersDAOImp();
-        cust.addCustomers(new Customers(newName, pass, newMail, newAge, IdCustomers));
+        cust.addCustomers(new Customers(newName, chiffre, newMail, newAge, IdCustomers));
         Projet.connectid = IdCustomers;
         WelcomePage a = new WelcomePage();
         a.setVisible(true);
