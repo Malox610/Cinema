@@ -8,7 +8,6 @@ package Menu;
 import cinema.*;
 import menu.*;
 
-
 /**
  *
  * @author esmil
@@ -20,15 +19,23 @@ public class MoviePage extends javax.swing.JFrame {
      */
     public MoviePage() {
         initComponents();
-       
+
         FilmDAO movie = new FilmDAOImp();
-       
-       Films Movie1 = new Films() ;
-       int id ;
-       Projet.FilmID1 = id;
-       
-       Movie1=movie.getFilmsID(id1);
-       
+
+        Films Movie1 = new Films();
+        Films Movie2 = new Films();
+        Films Movie3 = new Films();
+        Films Movie4 = new Films();
+        Films Movie5 = new Films();
+        Films Movie6 = new Films();
+
+        Movie1 = movie.getFilmsID(Projet.FilmID1);
+        Movie2 = movie.getFilmsID(Projet.FilmID2);
+        Movie3 = movie.getFilmsID(Projet.FilmID3);
+        Movie4 = movie.getFilmsID(Projet.FilmID4);
+        Movie5 = movie.getFilmsID(Projet.FilmID5);
+        Movie6 = movie.getFilmsID(Projet.FilmID6);
+
     }
 
     /**
@@ -529,7 +536,7 @@ public class MoviePage extends javax.swing.JFrame {
 
     private void Next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next1ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_Next1ActionPerformed
 
     private void Next2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next2ActionPerformed
