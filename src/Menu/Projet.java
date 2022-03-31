@@ -18,6 +18,10 @@ public class Projet {
     public static int Prix2 = 15;
     public static int Prix3 = 15;
     public static int Prix4 = 12;
+    public static int PromoSenior =8;
+    public static int PromoAdults = 3;
+    public static int PromoStudents = 10;
+    public static int PromoChildrens = 5;
 
     public static int FilmID1 = 1999;
     public static int FilmID2 = 2001;
