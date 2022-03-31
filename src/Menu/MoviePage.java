@@ -496,9 +496,9 @@ public class MoviePage extends javax.swing.JFrame {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
-        WelcomePage a =new WelcomePage();
-       a.setVisible(true);
-      this.setVisible(false);
+        WelcomePage a = new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed

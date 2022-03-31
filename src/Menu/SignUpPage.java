@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package Menu;
+
 import cinema.*;
-import java.security.SecureRandom; 
+import java.security.SecureRandom;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author esmil
@@ -205,49 +207,45 @@ public class SignUpPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SignUPbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUPbuttonActionPerformed
-          String pass = "";
-         String pass2="";
-          String newName;
-          String newMail;
-          int newAge;
-          
-         
-        do{
+        String pass = "";
+        String pass2 = "";
+        String newName;
+        String newMail;
+        int newAge;
+
+        do {
             pass = "";
-            pass2="";
-        
-         newName = NameBox.getText();
-         newMail = EmailBox.getText();
-         newAge =(int) AgeSpinner.getValue();
-        char[]  newPassword = PasswordBox.getPassword();
-        char[] newPasswordConfirm = ConfirmBox.getPassword();
-        
-        for(char c : newPassword)
-        {
-            pass+=c;
-        }
-         for(char c : newPasswordConfirm)
-        {
-            pass2+=c;
-        }
-          if(pass.equals(pass2)==false)
-         {
-         JOptionPane.showMessageDialog(null, "This is not the same password"); 
-         }
-          
-        }while(pass!=pass2);
-        int IdCustomers=-1;
-        do{ SecureRandom random = new SecureRandom();
-          IdCustomers= random.nextInt()/1000; 
-        }while(IdCustomers<0);
+            pass2 = "";
+
+            newName = NameBox.getText();
+            newMail = EmailBox.getText();
+            newAge = (int) AgeSpinner.getValue();
+            char[] newPassword = PasswordBox.getPassword();
+            char[] newPasswordConfirm = ConfirmBox.getPassword();
+
+            for (char c : newPassword) {
+                pass += c;
+            }
+            for (char c : newPasswordConfirm) {
+                pass2 += c;
+            }
+            if (pass.equals(pass2) == false) {
+                JOptionPane.showMessageDialog(null, "This is not the same password");
+            }
+
+        } while (pass != pass2);
+        int IdCustomers = -1;
+        do {
+            SecureRandom random = new SecureRandom();
+            IdCustomers = random.nextInt() / 1000;
+        } while (IdCustomers < 0);
         CustomersDAO cust = new CustomersDAOImp();
-        cust.addCustomers(new Customers(newName ,pass , newMail , newAge , IdCustomers ));
-        Projet.connectid=IdCustomers;
-        WelcomePage a =new WelcomePage();
+        cust.addCustomers(new Customers(newName, pass, newMail, newAge, IdCustomers));
+        Projet.connectid = IdCustomers;
+        WelcomePage a = new WelcomePage();
         a.setVisible(true);
         this.setVisible(false);
-        
-        
+
 
     }//GEN-LAST:event_SignUPbuttonActionPerformed
 
