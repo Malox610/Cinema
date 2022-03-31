@@ -176,9 +176,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="Mail">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Email"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>

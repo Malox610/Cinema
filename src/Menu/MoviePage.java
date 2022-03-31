@@ -76,12 +76,12 @@ public class MoviePage extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
-        Next = new javax.swing.JButton();
-        Next1 = new javax.swing.JButton();
+        NextPage1 = new javax.swing.JButton();
+        NextPage3 = new javax.swing.JButton();
         Next2 = new javax.swing.JButton();
-        Next3 = new javax.swing.JButton();
-        Next4 = new javax.swing.JButton();
-        Next5 = new javax.swing.JButton();
+        NextPAge4 = new javax.swing.JButton();
+        NextPage5 = new javax.swing.JButton();
+        NextPage6 = new javax.swing.JButton();
         BackButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -244,21 +244,21 @@ public class MoviePage extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(240, 240, 0));
         jLabel19.setText("Temps");
 
-        Next.setBackground(new java.awt.Color(0, 0, 0));
-        Next.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        Next.setText("J'y vais");
-        Next.addActionListener(new java.awt.event.ActionListener() {
+        NextPage1.setBackground(new java.awt.Color(0, 0, 0));
+        NextPage1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        NextPage1.setText("J'y vais");
+        NextPage1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NextActionPerformed(evt);
+                NextPage1ActionPerformed(evt);
             }
         });
 
-        Next1.setBackground(new java.awt.Color(0, 0, 0));
-        Next1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        Next1.setText("J'y vais");
-        Next1.addActionListener(new java.awt.event.ActionListener() {
+        NextPage3.setBackground(new java.awt.Color(0, 0, 0));
+        NextPage3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        NextPage3.setText("J'y vais");
+        NextPage3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Next1ActionPerformed(evt);
+                NextPage3ActionPerformed(evt);
             }
         });
 
@@ -271,30 +271,30 @@ public class MoviePage extends javax.swing.JFrame {
             }
         });
 
-        Next3.setBackground(new java.awt.Color(0, 0, 0));
-        Next3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        Next3.setText("J'y vais");
-        Next3.addActionListener(new java.awt.event.ActionListener() {
+        NextPAge4.setBackground(new java.awt.Color(0, 0, 0));
+        NextPAge4.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        NextPAge4.setText("J'y vais");
+        NextPAge4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Next3ActionPerformed(evt);
+                NextPAge4ActionPerformed(evt);
             }
         });
 
-        Next4.setBackground(new java.awt.Color(0, 0, 0));
-        Next4.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        Next4.setText("J'y vais");
-        Next4.addActionListener(new java.awt.event.ActionListener() {
+        NextPage5.setBackground(new java.awt.Color(0, 0, 0));
+        NextPage5.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        NextPage5.setText("J'y vais");
+        NextPage5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Next4ActionPerformed(evt);
+                NextPage5ActionPerformed(evt);
             }
         });
 
-        Next5.setBackground(new java.awt.Color(0, 0, 0));
-        Next5.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        Next5.setText("J'y vais");
-        Next5.addActionListener(new java.awt.event.ActionListener() {
+        NextPage6.setBackground(new java.awt.Color(0, 0, 0));
+        NextPage6.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        NextPage6.setText("J'y vais");
+        NextPage6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Next5ActionPerformed(evt);
+                NextPage6ActionPerformed(evt);
             }
         });
 
@@ -318,7 +318,7 @@ public class MoviePage extends javax.swing.JFrame {
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(91, 91, 91)
-                                .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(NextPage1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(49, 49, 49)
@@ -339,16 +339,14 @@ public class MoviePage extends javax.swing.JFrame {
                                 .addGap(53, 53, 53)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addGap(79, 79, 79)
-                                                .addComponent(jLabel6))
-                                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jLabel12)))
+                                        .addGap(79, 79, 79)
+                                        .addComponent(jLabel6))
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel12))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Next1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(NextPage3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(41, 41, 41))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(147, 147, 147)
@@ -370,7 +368,7 @@ public class MoviePage extends javax.swing.JFrame {
                                 .addGap(77, 77, 77))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
-                        .addComponent(Next3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(NextPAge4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(jLabel8)))
@@ -379,8 +377,7 @@ public class MoviePage extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
                             .addGap(40, 40, 40)
-                            .addComponent(Next4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(51, 51, 51))
+                            .addComponent(NextPage5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel16)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -400,7 +397,7 @@ public class MoviePage extends javax.swing.JFrame {
                                 .addComponent(jLabel17)
                                 .addGap(98, 98, 98))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(Next5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(NextPage6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)))
                         .addGap(52, 52, 52))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -421,7 +418,7 @@ public class MoviePage extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel16)
                         .addGap(36, 36, 36)
-                        .addComponent(Next4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(NextPage5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel9)
@@ -455,8 +452,8 @@ public class MoviePage extends javax.swing.JFrame {
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(428, 428, 428)))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Next1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Next3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(NextPage3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NextPAge4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
@@ -479,8 +476,8 @@ public class MoviePage extends javax.swing.JFrame {
                                         .addComponent(jLabel19)
                                         .addGap(36, 36, 36)))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Next5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NextPage1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NextPage6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Next2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(69, 69, 69))))
         );
@@ -503,7 +500,7 @@ public class MoviePage extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1756, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -569,39 +566,58 @@ public class MoviePage extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_BackButtonActionPerformed
 
-    private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
+    private void NextPage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextPage1ActionPerformed
         // TODO add your handling code here:
-        PaymentPage a = new PaymentPage();
-
+         MovieDetails a = new MovieDetails(Projet.FilmID1);
         a.setVisible(true);
         this.setVisible(false);
-
-    }//GEN-LAST:event_NextActionPerformed
+        
+    }//GEN-LAST:event_NextPage1ActionPerformed
 
     private void BackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BackButton1ActionPerformed
 
-    private void Next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next1ActionPerformed
+    private void NextPage3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextPage3ActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_Next1ActionPerformed
+         MovieDetails a = new MovieDetails(Projet.FilmID3);
+        a.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_NextPage3ActionPerformed
 
     private void Next2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next2ActionPerformed
         // TODO add your handling code here:
+         MovieDetails a = new MovieDetails(Projet.FilmID2);
+        a.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_Next2ActionPerformed
 
-    private void Next3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next3ActionPerformed
+    private void NextPAge4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextPAge4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Next3ActionPerformed
+         MovieDetails a = new MovieDetails(Projet.FilmID4);
+        a.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_NextPAge4ActionPerformed
 
-    private void Next4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next4ActionPerformed
+    private void NextPage5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextPage5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Next4ActionPerformed
+         MovieDetails a = new MovieDetails(Projet.FilmID5);
+        a.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_NextPage5ActionPerformed
 
-    private void Next5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next5ActionPerformed
+    private void NextPage6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextPage6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Next5ActionPerformed
+         MovieDetails a = new MovieDetails(Projet.FilmID6);
+        a.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_NextPage6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -641,12 +657,12 @@ public class MoviePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
     private javax.swing.JButton BackButton1;
-    private javax.swing.JButton Next;
-    private javax.swing.JButton Next1;
     private javax.swing.JButton Next2;
-    private javax.swing.JButton Next3;
-    private javax.swing.JButton Next4;
-    private javax.swing.JButton Next5;
+    private javax.swing.JButton NextPAge4;
+    private javax.swing.JButton NextPage1;
+    private javax.swing.JButton NextPage3;
+    private javax.swing.JButton NextPage5;
+    private javax.swing.JButton NextPage6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

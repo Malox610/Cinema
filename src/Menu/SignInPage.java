@@ -61,8 +61,6 @@ public class SignInPage extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SE Connecter");
 
-        Mail.setText("Email");
-
         jLabel3.setBackground(new java.awt.Color(240, 240, 0));
         jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));

@@ -82,7 +82,7 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel3" pref="0" max="32767" attributes="0"/>
+                              <Component id="jPanel3" pref="1756" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                                          <Component id="Next" min="-2" pref="145" max="-2" attributes="0"/>
+                                          <Component id="NextPage1" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -203,22 +203,18 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
-                                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="Next1" min="-2" pref="145" max="-2" attributes="0"/>
+                                          <Component id="NextPage3" min="-2" pref="145" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -250,7 +246,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="Next3" min="-2" pref="145" max="-2" attributes="0"/>
+                                  <Component id="NextPAge4" min="-2" pref="145" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
@@ -262,8 +258,7 @@
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                                      <Component id="Next4" min="-2" pref="145" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Component id="NextPage5" min="-2" pref="145" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jPanel8" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -290,7 +285,7 @@
                                           <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="Next5" min="-2" pref="145" max="-2" attributes="0"/>
+                                          <Component id="NextPage6" min="-2" pref="145" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -318,7 +313,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="Next4" min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="NextPage5" min="-2" pref="51" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -358,8 +353,8 @@
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="Next1" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                                              <Component id="Next3" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                              <Component id="NextPage3" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                              <Component id="NextPAge4" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -389,8 +384,8 @@
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="Next" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                                              <Component id="Next5" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                              <Component id="NextPage1" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                              <Component id="NextPage6" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                                               <Component id="Next2" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -691,7 +686,7 @@
                     <Property name="text" type="java.lang.String" value="Temps"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="Next">
+                <Component class="javax.swing.JButton" name="NextPage1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -702,10 +697,10 @@
                     <Property name="text" type="java.lang.String" value="J&apos;y vais"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextPage1ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Next1">
+                <Component class="javax.swing.JButton" name="NextPage3">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -716,7 +711,7 @@
                     <Property name="text" type="java.lang.String" value="J&apos;y vais"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Next1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextPage3ActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="Next2">
@@ -733,7 +728,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Next2ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Next3">
+                <Component class="javax.swing.JButton" name="NextPAge4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -744,10 +739,10 @@
                     <Property name="text" type="java.lang.String" value="J&apos;y vais"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Next3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextPAge4ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Next4">
+                <Component class="javax.swing.JButton" name="NextPage5">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -758,10 +753,10 @@
                     <Property name="text" type="java.lang.String" value="J&apos;y vais"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Next4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextPage5ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Next5">
+                <Component class="javax.swing.JButton" name="NextPage6">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -772,7 +767,7 @@
                     <Property name="text" type="java.lang.String" value="J&apos;y vais"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Next5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NextPage6ActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

@@ -14,7 +14,7 @@ public class MovieDetails extends javax.swing.JFrame {
     /**
      * Creates new form MoviePage
      */
-    public MovieDetails() {
+    public MovieDetails(int idmovie) {
         initComponents();
     }
 
