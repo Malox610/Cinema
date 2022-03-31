@@ -193,14 +193,29 @@ public class SignInPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         boolean conn = false;
-       String clienttmail = Mail.getText();
+        do{
+        String clienttmail = Mail.getText();
        char[] clientpassword = password.getPassword();
        String pass = "";
        for(char c : clientpassword)
        {
            pass+=c;//rajoue du chiffrage
        }
-       for(Customers s : Cinema.custList )
+        CustomersDAO cust = new CustomersDAOImp();
+       
+       Customers s = new Customers() ;
+       s = cust.getCustomersConnexion(clienttmail, pass);
+       if(Projet.connectid>0)
+       {
+       conn=true;
+       }
+        if(conn==false)
+       {
+          JOptionPane.showMessageDialog(null, "Wrong user/password"); 
+       }
+        }while(conn==false);
+       
+     /*  for(Customers s : Cinema.custList )
        {
            if(s.getEmail().equals(clientpassword))
            {
@@ -208,17 +223,14 @@ public class SignInPage extends javax.swing.JFrame {
                {
                    conn = true;
                    Projet.connectid = s.getID();
-                   WelcomePage a = new WelcomePage();
-                   a.setVisible(true);
+                   
                }
            }
-       }
-       if(conn==false)
-       {
-          JOptionPane.showMessageDialog(null, "Wrong user/password"); 
-       }
+       }*/
+      
         
-        
+        WelcomePage a = new WelcomePage();
+                   a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ConnexionButtonActionPerformed
 

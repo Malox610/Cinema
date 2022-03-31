@@ -5,6 +5,7 @@
  */
 package cinema;
 
+import Menu.*;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class CustomersDAOImp implements CustomersDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from customer where ID_customer = " + id);
+            ResultSet result = stmt.executeQuery("\"SELECT * FROM customer WHERE `ID_customer` = '" + id+"';");
             while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
                 Customers cust = new Customers(result.getString(2), result.getString(4), result.getString(3), result.getInt(5), result.getInt(1));
 
@@ -39,13 +40,15 @@ public class CustomersDAOImp implements CustomersDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from customer where email = " + login + " and password = " + password);
-            while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
+            String sqlquery ="SELECT * FROM customer WHERE `email` = '" + login + "' AND `password` = '" + password+"';";
+            ResultSet result = stmt.executeQuery(sqlquery);
+              
+             while (result.next()) {// String name , String Password , String email , int age 
                 Customers cust = new Customers(result.getString(2), result.getString(4), result.getString(3), result.getInt(5), result.getInt(1));
-
+                Projet.connectid =result.getInt(1);
                 return cust;
-
-            }
+             }
+            
         } catch (SQLException e) {
             System.out.println(e);
         }

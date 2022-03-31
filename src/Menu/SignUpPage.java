@@ -233,7 +233,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "This is not the same password");
             }
 
-        } while (pass != pass2);
+        } while (pass == pass2);
         int IdCustomers = -1;
         do {
             SecureRandom random = new SecureRandom();

@@ -157,9 +157,7 @@ public class WelcomePage extends javax.swing.JFrame {
     private void AccountsSettingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountsSettingButtonActionPerformed
         // TODO add your handling code here:
         
-         SignInPage a= new SignInPage();
-        a.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_AccountsSettingButtonActionPerformed
 
     private void EmployeeConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployeeConnexionButtonActionPerformed
@@ -178,6 +176,9 @@ public class WelcomePage extends javax.swing.JFrame {
 
     private void ConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionButtonActionPerformed
         // TODO add your handling code here:
+         SignInPage a= new SignInPage();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ConnexionButtonActionPerformed
 
     /**
