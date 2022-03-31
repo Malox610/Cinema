@@ -52,11 +52,11 @@ public class SignUpPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel1.setText("Créer un compte");
+        jLabel1.setText("CREATE ACCOUNt");
 
         SignUPbutton.setBackground(new java.awt.Color(240, 240, 0));
         SignUPbutton.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
-        SignUPbutton.setText("Créer");
+        SignUPbutton.setText("CREATE ");
         SignUPbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SignUPbuttonActionPerformed(evt);
@@ -92,7 +92,7 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(240, 240, 0));
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel6.setText("Nom Prénom");
+        jLabel6.setText("Pseudo");
 
         ConfirmBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,10 +142,10 @@ public class SignUpPage extends javax.swing.JFrame {
                             .addComponent(AgeSpinner)
                             .addComponent(EmailBox))))
                 .addGap(563, 563, 563))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(646, 646, 646)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(SignUPbutton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(656, 656, 656))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,9 +175,9 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ConfirmBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGap(76, 76, 76)
                 .addComponent(SignUPbutton)
-                .addGap(186, 186, 186))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         jLabel1.getAccessibleContext().setAccessibleName("CreationCompte");

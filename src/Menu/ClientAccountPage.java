@@ -52,57 +52,58 @@ public class ClientAccountPage extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jScrollBar1 = new javax.swing.JScrollBar();
         jButton1 = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
-        jLabel1.setText("Historique des commandes");
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel1.setText("Command historic");
 
-        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jLabel2.setText("Commande n°X");
+        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel2.setText("Command n°X");
 
-        jLabel3.setText("Nom Film");
+        jLabel3.setText("Movie Name");
 
-        jLabel4.setText("Date commande");
+        jLabel4.setText("Command Date");
 
-        jLabel5.setText("Nombre de places");
+        jLabel5.setText("Number of ticket");
 
-        jLabel6.setText("Prix");
+        jLabel6.setText("Price");
 
-        jLabel7.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jLabel7.setText("Commande n°X");
+        jLabel7.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel7.setText("Command n°X");
 
-        jLabel8.setText("Nom Film");
+        jLabel8.setText("Movie Name");
 
-        jLabel9.setText("Date commande");
+        jLabel9.setText("Command Date");
 
-        jLabel10.setText("Nombre de places");
+        jLabel10.setText("Number of ticket");
 
-        jLabel11.setText("Prix");
+        jLabel11.setText("Price");
 
-        jLabel12.setText("Prix");
+        jLabel12.setText("Price");
 
-        jLabel13.setText("Nombre de places");
+        jLabel13.setText("Number of ticket");
 
-        jLabel14.setText("Date commande");
+        jLabel14.setText("Command Date");
 
-        jLabel15.setText("Nom Film");
+        jLabel15.setText("Movie Name");
 
-        jLabel16.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jLabel16.setText("Commande n°X");
+        jLabel16.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel16.setText("Command n°X");
 
-        jLabel17.setText("Date commande");
+        jLabel17.setText("Command Date");
 
-        jLabel18.setText("Nom Film");
+        jLabel18.setText("Movie Name");
 
-        jLabel19.setText("Prix");
+        jLabel19.setText("Price");
 
-        jLabel20.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jLabel20.setText("Commande n°X");
+        jLabel20.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel20.setText("Command n°X");
 
-        jLabel21.setText("Nombre de places");
+        jLabel21.setText("Number of ticket");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -128,7 +129,9 @@ public class ClientAccountPage extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
-                                    .addComponent(jLabel6))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel19)
+                                    .addComponent(jLabel12))
                                 .addGap(60, 60, 60))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,12 +158,7 @@ public class ClientAccountPage extends javax.swing.JFrame {
                                 .addGap(40, 40, 40)
                                 .addComponent(jLabel9)
                                 .addGap(64, 64, 64)
-                                .addComponent(jLabel10))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(436, 436, 436)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel12))))
+                                .addComponent(jLabel10)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -202,12 +200,16 @@ public class ClientAccountPage extends javax.swing.JFrame {
                     .addComponent(jLabel17)
                     .addComponent(jLabel21)
                     .addComponent(jLabel19))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
             .addComponent(jScrollBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jButton1.setText("Back");
+
+        jLabel22.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(240, 240, 0));
+        jLabel22.setText("CLIENT HISTORIC");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -216,18 +218,23 @@ public class ClientAccountPage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(571, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(371, 371, 371)
+                        .addComponent(jLabel22)))
+                .addContainerGap(439, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -295,6 +302,7 @@ public class ClientAccountPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
