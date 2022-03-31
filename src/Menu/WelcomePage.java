@@ -81,6 +81,7 @@ public class WelcomePage extends javax.swing.JFrame {
         });
 
         jLabel1.setForeground(new java.awt.Color(200, 20, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Menu/photocine.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         ConnexionButton.setText("Connexion");
@@ -129,7 +130,7 @@ public class WelcomePage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AccountsSettingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(31, 31, 31)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
