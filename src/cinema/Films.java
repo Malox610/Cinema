@@ -16,7 +16,7 @@ public class Films {
    protected  String m_director;
    protected  String m_genre;
    protected  String m_time;
-   protected  float m_review;
+   protected  String m_synopsis;
    protected  int m_IDmovie =-1 ; 
      // ajouter du le truc pour mettre les images
 
@@ -25,9 +25,9 @@ public class Films {
      */
     public Films()
     {
-       m_review=0; 
+      
     }
-    public Films (String title , String director , String genre , String time , int IDmovie )
+    public Films (String title , String director , String genre , String time , int IDmovie , String synopsis)
     {
         //create object for customer who are connected 
         
@@ -36,6 +36,7 @@ public class Films {
          m_genre=genre;
          m_time=time;
          m_IDmovie=IDmovie;  
+         m_synopsis=synopsis;
     }
     
     String getTitle()
@@ -56,9 +57,9 @@ public class Films {
     {
     return m_time ;
     }
-     float getReview()
+     String getSynopsis()
      {
-     return m_review;
+     return m_synopsis;
      }
      
      int getIDMovie()

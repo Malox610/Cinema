@@ -17,7 +17,7 @@ public class Projet {
     public int Prix1 = 15;
     public int Prix2 = 15;
     public int Prix3 = 15;
-    public int Prix4 = 15;
+    public int Prix4 = 12;
 
     public int FilmID1 = 1999;
     public int FilmID2 = 2001;

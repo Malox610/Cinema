@@ -11,6 +11,6 @@ package cinema;
  */
 public interface FilmDAO {
     
-    public Films getFilms(int id);
+    public Films getFilmsID(int id);
     
 }

@@ -5,6 +5,10 @@
  */
 package Menu;
 
+import cinema.*;
+import menu.*;
+
+
 /**
  *
  * @author esmil
@@ -16,6 +20,15 @@ public class MoviePage extends javax.swing.JFrame {
      */
     public MoviePage() {
         initComponents();
+       
+        FilmDAO movie = new FilmDAOImp();
+       
+       Films Movie1 = new Films() ;
+       int id ;
+       Projet.FilmID1 = id;
+       
+       Movie1=movie.getFilmsID(id1);
+       
     }
 
     /**
@@ -516,6 +529,7 @@ public class MoviePage extends javax.swing.JFrame {
 
     private void Next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_Next1ActionPerformed
 
     private void Next2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Next2ActionPerformed
