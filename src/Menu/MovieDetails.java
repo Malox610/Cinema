@@ -5,6 +5,10 @@
  */
 package Menu;
 
+import cinema.FilmDAO;
+import cinema.FilmDAOImp;
+import cinema.Films;
+
 /**
  *
  * @author esmil
@@ -16,6 +20,9 @@ public class MovieDetails extends javax.swing.JFrame {
      */
     public MovieDetails(int idmovie) {
         initComponents();
+        FilmDAO movie = new FilmDAOImp();
+        Films Movie1 = new Films();
+        Movie1 = movie.getFilmsID(idmovie);
     }
 
     /**
@@ -462,7 +469,7 @@ public class MovieDetails extends javax.swing.JFrame {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
-        WelcomePage a =new WelcomePage();
+       MoviePage a =new MoviePage();
        a.setVisible(true);
       this.setVisible(false);
     }//GEN-LAST:event_BackButtonActionPerformed
@@ -502,7 +509,7 @@ public class MovieDetails extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MovieDetails().setVisible(true);
+                new MovieDetails(1).setVisible(true);
             }
         });
     }
