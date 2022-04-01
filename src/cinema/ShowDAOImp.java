@@ -78,5 +78,24 @@ public class ShowDAOImp implements ShowDAO {
             System.out.println(e);
         }
     }
+    
+    public void UpdateSeat(Show sho)
+    {
+     Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            String sqlStatement = "UPDATE `show` "
+                    + "SET `nb_seat` = '" + sho.getNbSeat()
+                    + " 'WHERE "
+                    + "`show`.`ID_show`= " + sho.getIDshow() + " ;";
+            stmt.executeUpdate(sqlStatement);
+            //  System.out.println("rows=" + rows);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    
+    }
 
 }
