@@ -218,6 +218,11 @@ public class ClientAccountPage extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel22.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(240, 240, 0));
@@ -362,6 +367,13 @@ public class ClientAccountPage extends javax.swing.JFrame {
         s.setPassword(pass);
         cust.modifCustomer(s);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        WelcomePage a = new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

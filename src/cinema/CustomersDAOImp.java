@@ -21,7 +21,7 @@ public class CustomersDAOImp implements CustomersDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("\"SELECT * FROM customer WHERE `ID_customer` = '" + id+"';");
+            ResultSet result = stmt.executeQuery("SELECT * FROM customer WHERE `ID_customer` = " + id+";");
             while (result.next()) {    
                 String mdp =result.getString(4);
         char[] ch =mdp.toString().toCharArray();
@@ -218,9 +218,9 @@ public class CustomersDAOImp implements CustomersDAO {
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
             String sqlStatement = "UPDATE `customer` "
-                    + "SET password='" + cust.getPassword()
-                    + " WHERE "
-                    + "ID_customer='" + cust.getID() + "'";
+                    + "SET `password` = '" + cust.getPassword()
+                    + " 'WHERE "
+                    + "`ID_customer`= " + cust.getID() + " ;";
             stmt.executeUpdate(sqlStatement);
             //  System.out.println("rows=" + rows);
         } catch (Exception e) {
