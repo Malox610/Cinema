@@ -148,12 +148,12 @@
               <Color blue="0" green="14" red="c8" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Menu/photocine.jpg"/>
+              <Image iconType="3" name="/Menu/Picture/photocine.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
           <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="ImageWelcome"/>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
           </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JButton" name="ConnexionButton">
