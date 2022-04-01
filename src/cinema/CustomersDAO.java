@@ -20,5 +20,8 @@ public interface CustomersDAO {
     public ArrayList<Customers> getCustomers();
 
     public void addCustomers(Customers cust);
+    
+    public void modifCustomer(Customers cust);
+            
 
 }

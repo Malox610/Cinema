@@ -22,8 +22,64 @@ public class CustomersDAOImp implements CustomersDAO {
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("\"SELECT * FROM customer WHERE `ID_customer` = '" + id+"';");
-            while (result.next()) {            // String name , String Password , String email , int age // je sais pas ca correspond a quoi
-                Customers cust = new Customers(result.getString(2), result.getString(4), result.getString(3), result.getInt(5), result.getInt(1));
+            while (result.next()) {    
+                String mdp =result.getString(4);
+        char[] ch =mdp.toString().toCharArray();
+        int clé = ch[0];
+        int clé2 =ch[1];
+        switch(clé){
+            case 49: 
+                clé =1 ;
+                break;
+                case 50: 
+                clé =2 ;
+                break;
+                case 51: 
+                clé =3 ;
+                break;
+                case 52: 
+                clé =4 ;
+                break;
+                case 53: 
+                clé =5 ;
+                break;
+                case 54: 
+                clé =6 ;
+                break;
+                case 55: 
+                clé =7 ;
+                break;
+                case 56: 
+                clé =8 ;
+                break;
+                 case 57: 
+                clé =9 ;
+                break;
+                
+            default:
+                clé =0 ;
+                break;
+        }
+        
+       
+        
+        for(int j =2 ; j<ch.length ; j++)
+        {
+            if(clé2==49)
+            { 
+                ch[j] =(char)((int)ch[j]-clé); 
+            }else if(clé2==48)
+            {
+            ch[j] =(char)((int)ch[j]+clé); 
+            }
+        }
+        String dechiffre ="";
+      for(char c : ch)
+       {
+           dechiffre+=c;//rajoue du chiffrage
+       }
+                // String name , String Password , String email , int age 
+                Customers cust = new Customers(result.getString(2), dechiffre, result.getString(3), result.getInt(5), result.getInt(1));
 
                 return cust;
 
@@ -83,7 +139,7 @@ public class CustomersDAOImp implements CustomersDAO {
                 break;
         }
         
-        System.out.println(clé);
+       
         
         for(int j =2 ; j<ch.length ; j++)
         {
