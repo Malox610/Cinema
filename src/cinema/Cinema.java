@@ -13,7 +13,7 @@ import java.util.*;
  * @author esmil
  */
 public class Cinema {
-    public static ArrayList<Films> listeFilm =new ArrayList<>();
+    public static ArrayList<Show> ShowList =new ArrayList<>();
     public static ArrayList<Customers> custList =new ArrayList<>();
     public static Customers cust =new Customers();
     
@@ -21,6 +21,7 @@ public class Cinema {
     {
         CustomersDAO cust = new CustomersDAOImp();
         custList=cust.getCustomers();
+        
     }
     
     
