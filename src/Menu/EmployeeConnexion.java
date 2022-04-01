@@ -85,7 +85,7 @@ public class EmployeeConnexion extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel4.setText("Vous n'avez pas encore de compte ?");
+        jLabel4.setText("Don't have an account yet ?");
 
         jLabel5.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 0));
@@ -96,15 +96,10 @@ public class EmployeeConnexion extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(244, 244, 244)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(357, 357, 357)
-                        .addComponent(jLabel4)))
+                .addGap(92, 92, 92)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(244, 244, 244)
+                .addComponent(jLabel5)
                 .addContainerGap(385, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -113,6 +108,8 @@ public class EmployeeConnexion extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(507, 507, 507))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(28, 28, 28)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(401, 401, 401))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
