@@ -204,8 +204,6 @@ public class CustomersDAOImp implements CustomersDAO {
                 }
             }
 
-            // System.out.println("rows=" + rows);
-            //  S1Project.patientList.add(pat);
         } catch (Exception e) {
             System.out.println(e);
         }
