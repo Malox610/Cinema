@@ -5,6 +5,8 @@
  */
 package cinema;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author esmil
@@ -54,5 +56,20 @@ public class Show {
      {
          return m_idmovie;
      }
+    
+    void setNbSeat(int nbticket)
+    {
+        int newnombre=m_nbseat-nbticket;
+        if(newnombre>=0)
+        {
+        m_nbseat=newnombre;
+        
+        }else
+        {
+         JOptionPane.showMessageDialog(null, "You have taken too much ticket");
+        }
+        
+    
+    }
     
 }

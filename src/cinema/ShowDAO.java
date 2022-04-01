@@ -12,7 +12,13 @@ import java.util.ArrayList;
  * @author esmil
  */
 public interface ShowDAO {
-     public ArrayList<Show> getShow();
-      public void addShow(Show sho);
-    
+
+    public ArrayList<Show> getShow();
+
+    public void addShow(Show sho);
+
+    public void deleteShow(Show sho);
+
+    public void UpdateSeat(Show sho);
+
 }
