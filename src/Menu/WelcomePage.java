@@ -156,6 +156,9 @@ public class WelcomePage extends javax.swing.JFrame {
 
     private void AccountsSettingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccountsSettingButtonActionPerformed
         // TODO add your handling code here:
+        ClientAccountPage a = new  ClientAccountPage();
+        a.setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_AccountsSettingButtonActionPerformed
