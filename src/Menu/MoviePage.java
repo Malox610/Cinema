@@ -19,6 +19,19 @@ public class MoviePage extends javax.swing.JFrame {
      */
     public MoviePage() {
         initComponents();
+        initComponents();
+         MyProfilebtn.setVisible(false);
+           connexion.setVisible(false);
+        if(Projet.connectid>0)
+        {
+        MyProfilebtn.setVisible(true);
+      connexion.setVisible(false);
+        }
+        else
+        {
+       MyProfilebtn.setVisible(false);
+       connexion.setVisible(true);
+        }
 
     }
 
@@ -112,7 +125,8 @@ public class MoviePage extends javax.swing.JFrame {
         BoutonMovie4 = new javax.swing.JButton();
         BoutonMovie5 = new javax.swing.JButton();
         BoutonMovie6 = new javax.swing.JButton();
-        BackButton1 = new javax.swing.JButton();
+        connexion = new javax.swing.JButton();
+        MyProfilebtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -559,14 +573,25 @@ public class MoviePage extends javax.swing.JFrame {
                 .addGap(69, 69, 69))
         );
 
-        BackButton1.setBackground(new java.awt.Color(0, 0, 0));
-        BackButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        BackButton1.setForeground(new java.awt.Color(240, 240, 0));
-        BackButton1.setText("My Profile");
-        BackButton1.setToolTipText("");
-        BackButton1.addActionListener(new java.awt.event.ActionListener() {
+        connexion.setBackground(new java.awt.Color(0, 0, 0));
+        connexion.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        connexion.setForeground(new java.awt.Color(240, 240, 0));
+        connexion.setText("Connexion");
+        connexion.setToolTipText("");
+        connexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButton1ActionPerformed(evt);
+                connexionActionPerformed(evt);
+            }
+        });
+
+        MyProfilebtn.setBackground(new java.awt.Color(0, 0, 0));
+        MyProfilebtn.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        MyProfilebtn.setForeground(new java.awt.Color(240, 240, 0));
+        MyProfilebtn.setText("My Profile");
+        MyProfilebtn.setToolTipText("");
+        MyProfilebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MyProfilebtnActionPerformed(evt);
             }
         });
 
@@ -584,24 +609,32 @@ public class MoviePage extends javax.swing.JFrame {
                         .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
-                        .addGap(666, 666, 666)
-                        .addComponent(BackButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(655, 655, 655)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(connexion, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MyProfilebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BackButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)
-                        .addGap(2, 2, 2)))
+                        .addGap(2, 2, 2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(connexion, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(MyProfilebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(3, 3, 3)))
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -617,7 +650,7 @@ public class MoviePage extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -651,9 +684,12 @@ public class MoviePage extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BoutonMovie1ActionPerformed
 
-    private void BackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton1ActionPerformed
+    private void connexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connexionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackButton1ActionPerformed
+        SignInPage a = new SignInPage();
+        a.setVisible(true);
+      this.setVisible(false);
+    }//GEN-LAST:event_connexionActionPerformed
 
     private void BoutonMovie3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie3ActionPerformed
         // TODO add your handling code here:
@@ -695,6 +731,13 @@ public class MoviePage extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_BoutonMovie6ActionPerformed
+
+    private void MyProfilebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MyProfilebtnActionPerformed
+        // TODO add your handling code here:
+         ClientAccountPage a= new ClientAccountPage();
+         a.setVisible(true);
+      this.setVisible(false);
+    }//GEN-LAST:event_MyProfilebtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -739,7 +782,6 @@ public class MoviePage extends javax.swing.JFrame {
     private javax.swing.JPanel Affiche5;
     private javax.swing.JPanel Affiche6;
     private javax.swing.JButton BackButton;
-    private javax.swing.JButton BackButton1;
     private javax.swing.JButton BoutonMovie1;
     private javax.swing.JButton BoutonMovie2;
     private javax.swing.JButton BoutonMovie3;
@@ -758,12 +800,14 @@ public class MoviePage extends javax.swing.JFrame {
     private javax.swing.JLabel MovieYear4;
     private javax.swing.JLabel MovieYear5;
     private javax.swing.JLabel MovieYear6;
+    private javax.swing.JButton MyProfilebtn;
     private javax.swing.JLabel Runtime1;
     private javax.swing.JLabel Runtime2;
     private javax.swing.JLabel Runtime3;
     private javax.swing.JLabel Runtime4;
     private javax.swing.JLabel Runtime5;
     private javax.swing.JLabel Runtime6;
+    private javax.swing.JButton connexion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
