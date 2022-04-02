@@ -187,6 +187,9 @@ public class SignInPage extends javax.swing.JFrame {
 
     private void BackButtonNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonNameActionPerformed
         // TODO add your handling code here:
+        WelcomePage a = new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BackButtonNameActionPerformed
 
     private void ConnexionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConnexionButtonActionPerformed

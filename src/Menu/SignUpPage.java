@@ -290,6 +290,9 @@ public class SignUpPage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         WelcomePage a = new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void EmailBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailBoxActionPerformed

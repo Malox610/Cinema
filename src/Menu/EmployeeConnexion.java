@@ -138,11 +138,11 @@ public class EmployeeConnexion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-          // TODO add your handling code here:
-          
-          Menu_Employee a = new Menu_Employee();
-          a.setVisible(true);
-          this.setVisible(false);
+        // TODO add your handling code here:
+
+        Menu_Employee a = new Menu_Employee();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed
@@ -150,7 +150,9 @@ public class EmployeeConnexion extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordBoxActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        WelcomePage a = new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
