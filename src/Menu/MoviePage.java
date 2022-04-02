@@ -167,8 +167,8 @@ public class MoviePage extends javax.swing.JFrame {
             Affiche2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Affiche2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Affiche2Layout.setVerticalGroup(
             Affiche2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -561,6 +561,7 @@ public class MoviePage extends javax.swing.JFrame {
 
         BackButton1.setBackground(new java.awt.Color(0, 0, 0));
         BackButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        BackButton1.setForeground(new java.awt.Color(240, 240, 0));
         BackButton1.setText("My Profile");
         BackButton1.setToolTipText("");
         BackButton1.addActionListener(new java.awt.event.ActionListener() {
