@@ -30,7 +30,7 @@ public class Employee extends Humain {
     }
 
     Employee() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         //To change body of generated methods, choose Tools | Templates.
     }
     
     

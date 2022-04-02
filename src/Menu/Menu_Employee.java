@@ -82,6 +82,9 @@ public class Menu_Employee extends javax.swing.JFrame {
         Movie6 = movie.getFilmsID(Projet.FilmID6);
         String [] listeFil={Movie1.getTitle(),Movie2.getTitle(),Movie3.getTitle(),Movie4.getTitle(),Movie5.getTitle(),Movie6.getTitle()};
         ComboCurrentMovie = new javax.swing.JComboBox<>();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jTextField3 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
@@ -262,6 +265,11 @@ public class Menu_Employee extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
         jButton6.setText("BACK");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel31.setBackground(new java.awt.Color(0, 0, 0));
         jLabel31.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
@@ -282,23 +290,35 @@ public class Menu_Employee extends javax.swing.JFrame {
             }
         });
 
+        jDesktopPane1.setBackground(new java.awt.Color(204, 255, 204));
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jButton1.setText("image");
+
         javax.swing.GroupLayout jInternalFrame3Layout = new javax.swing.GroupLayout(jInternalFrame3.getContentPane());
         jInternalFrame3.getContentPane().setLayout(jInternalFrame3Layout);
         jInternalFrame3Layout.setHorizontalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame3Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(462, 462, 462)
-                .addComponent(jLabel29)
-                .addContainerGap(586, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(283, 283, 283)
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
                         .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel32)
-                            .addComponent(jLabel31))
+                            .addComponent(jLabel31)
+                            .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                                .addComponent(jLabel32)))
                         .addGap(60, 60, 60)
                         .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(ComboCurrentMovie, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -307,6 +327,21 @@ public class Menu_Employee extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
                         .addComponent(ChangeSpotMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(537, 537, 537))))
+            .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(462, 462, 462)
+                        .addComponent(jLabel29))
+                    .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                        .addGap(311, 311, 311)
+                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                .addGap(306, 306, 306)
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jInternalFrame3Layout.setVerticalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,11 +354,16 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboCurrentMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel31))
-                .addGap(132, 132, 132)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(148, 148, 148)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addGap(116, 116, 116)
                 .addComponent(ChangeSpotMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(158, 158, 158))
         );
@@ -813,7 +853,35 @@ public class Menu_Employee extends javax.swing.JFrame {
 
     private void ChangeSpotMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeSpotMovieActionPerformed
         // TODO add your handling code here:
-
+            FilmDAO fil =new FilmDAOImp();
+            //Films CurrentfilmChoix = new Films();
+            int NewFilmsID=fil.getFilmsName(jComboBox2.getSelectedItem().toString());
+         int  CurrentfilmChoixID=fil.getFilmsName(ComboCurrentMovie.getSelectedItem().toString());
+         if(CurrentfilmChoixID==Projet.FilmID1)
+         {
+         Projet.FilmID1=NewFilmsID;
+         }
+         if(CurrentfilmChoixID==Projet.FilmID2)
+         {
+         Projet.FilmID2=NewFilmsID;
+         }
+         if(CurrentfilmChoixID==Projet.FilmID3)
+         {
+         Projet.FilmID3=NewFilmsID;
+         }
+         if(CurrentfilmChoixID==Projet.FilmID4)
+         {
+         Projet.FilmID4=NewFilmsID;
+         }
+         if(CurrentfilmChoixID==Projet.FilmID5)
+         {
+         Projet.FilmID5=NewFilmsID;
+         }
+         if(CurrentfilmChoixID==Projet.FilmID6)
+         {
+         Projet.FilmID6=NewFilmsID;
+         }
+            
 
     }//GEN-LAST:event_ChangeSpotMovieActionPerformed
 
@@ -841,6 +909,13 @@ public class Menu_Employee extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_CategorieComboBoxActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        WelcomePage a =new WelcomePage();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -898,12 +973,14 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame3;
     private javax.swing.JLabel jLabel1;
@@ -948,6 +1025,7 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;

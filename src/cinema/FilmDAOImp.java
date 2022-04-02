@@ -66,7 +66,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = " + Name );
+            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = '" + Name +"';");
             while (result.next()) 
             {  
         

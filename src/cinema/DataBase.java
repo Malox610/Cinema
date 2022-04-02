@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package cinema;
+import java.io.File;
 import java.sql.*;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,7 +15,8 @@ import java.sql.*;
  */
 public class DataBase {
     //classe pour charger le driver
-    
+    String filename =null;
+    public static String path;
      Connection con = null;
  
     
@@ -27,8 +31,29 @@ public class DataBase {
             
         }catch (SQLException e) {
             System.out.println(e);
+            return null;
         }
         return con;
+    }
+    public void filen()
+    {
+        try{
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogTitle("choose an image");
+        chooser.setApproveButtonText("add an image");
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        filename=f.getAbsolutePath();
+        this.path=(filename);
+        }catch(Exception e)//dwxfqe
+        {
+           System.out.println(e);
+        JOptionPane.showMessageDialog(null , "Please choose an image");
+        }
+    }
+    
+    public String getp(){
+             return path;
     }
     
 }
