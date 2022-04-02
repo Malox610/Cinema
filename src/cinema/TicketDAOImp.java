@@ -56,24 +56,22 @@ public class TicketDAOImp implements TicketDAO{
 
     public Ticket getTick(int id)
     {
-        Ticket TicketCusto;
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT t.date, t.nbticket, t.id_customer, t.id_show FROM ticket t" 
-                                + "INNER JOIN show s ON s.id_show=t.id_show" + "INNER JOIN customer c ON c.id_customer=t.id_customer"
-                                + "WHERE s.date = t.date");
+            ResultSet result = stmt.executeQuery("SELECT t.date, t.nbticket, t.id_customer, t.id_show" + "FROM ticket t" 
+                                + "INNER JOIN customer c ON c.id_customer=t.id_customer");
                                 
             while(result.next())
             {
-                
+                Ticket ticketcusto = new Ticket(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.CustList.get(5), Cinema.ShowList.get(6));
             }
         } catch (SQLException e){
             System.out.println(e);
         }
-        return TicketCusto;
+        return new Ticket();
     }
 
     public void modifTicket(Ticket ti)
