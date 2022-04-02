@@ -26,7 +26,7 @@ public class ShowDAOImp implements ShowDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from show");
+            ResultSet result = stmt.executeQuery("select * from `show`");
 
             while (result.next()) {
                 //int IDshow , String Date,int nbseat,int room ,int idmovie

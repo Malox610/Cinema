@@ -6,7 +6,6 @@
 package Menu;
 
 import cinema.*;
-import menu.*;
 
 /**
  *

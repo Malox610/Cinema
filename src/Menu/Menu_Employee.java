@@ -8,6 +8,8 @@ package Menu;
 import cinema.FilmDAO;
 import cinema.FilmDAOImp;
 import cinema.Films;
+import cinema.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,7 +22,7 @@ public class Menu_Employee extends javax.swing.JFrame {
      */
     public Menu_Employee() {
         initComponents();
-       
+
     }
 
     /**
@@ -51,11 +53,17 @@ public class Menu_Employee extends javax.swing.JFrame {
         ShowRoom = new javax.swing.JSpinner();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jInternalFrame3 = new javax.swing.JInternalFrame();
-        jButton3 = new javax.swing.JButton();
+        ChangeSpotMovie = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
+        ArrayList<String>FilmName=new ArrayList<>();
+
+        Cinema.FilmList.forEach((m) -> {
+            FilmName.add(m.getTitle());
+        });
+        String[] Filname= FilmName.toArray(new String[FilmName.size()]);
         jComboBox2 = new javax.swing.JComboBox<>();
         FilmDAO movie = new FilmDAOImp();
 
@@ -84,12 +92,12 @@ public class Menu_Employee extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        CategorieComboBox = new javax.swing.JComboBox<>();
         PrixSeance = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField14 = new javax.swing.JTextField();
+        ChangepriceButton = new javax.swing.JButton();
+        NewPriceSpinner = new javax.swing.JSpinner();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         ListMovie = new javax.swing.JList<>();
@@ -238,19 +246,19 @@ public class Menu_Employee extends javax.swing.JFrame {
         jInternalFrame3.setBackground(new java.awt.Color(0, 0, 0));
         jInternalFrame3.setVisible(true);
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
-        jButton3.setText("ADD");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ChangeSpotMovie.setBackground(new java.awt.Color(0, 0, 0));
+        ChangeSpotMovie.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
+        ChangeSpotMovie.setText("ADD");
+        ChangeSpotMovie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ChangeSpotMovieActionPerformed(evt);
             }
         });
 
         jLabel29.setBackground(new java.awt.Color(0, 0, 0));
         jLabel29.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel29.setText("Change movie");
+        jLabel29.setText("Change Film");
 
         jButton6.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
         jButton6.setText("BACK");
@@ -258,14 +266,14 @@ public class Menu_Employee extends javax.swing.JFrame {
         jLabel31.setBackground(new java.awt.Color(0, 0, 0));
         jLabel31.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel31.setText("Current Movie:");
+        jLabel31.setText("Current Films:");
 
         jLabel32.setBackground(new java.awt.Color(0, 0, 0));
         jLabel32.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel32.setText("ALL movie :");
+        jLabel32.setText("ALL Films :");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(Filname));
 
         ComboCurrentMovie.setModel(new javax.swing.DefaultComboBoxModel<>(listeFil));
         ComboCurrentMovie.addActionListener(new java.awt.event.ActionListener() {
@@ -283,7 +291,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(462, 462, 462)
                 .addComponent(jLabel29)
-                .addContainerGap(557, Short.MAX_VALUE))
+                .addContainerGap(586, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,7 +305,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                             .addComponent(jComboBox2, 0, 318, Short.MAX_VALUE))
                         .addGap(409, 409, 409))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ChangeSpotMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(537, 537, 537))))
         );
         jInternalFrame3Layout.setVerticalGroup(
@@ -316,7 +324,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                     .addComponent(jLabel32)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(148, 148, 148)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChangeSpotMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(158, 158, 158))
         );
 
@@ -360,8 +368,13 @@ public class Menu_Employee extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(240, 240, 0));
         jLabel13.setText("Categories : ");
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Senior", "Adults", "Students", "Children", " " }));
+        CategorieComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        CategorieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Senior", "Adults", "Students", "Children", " " }));
+        CategorieComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CategorieComboBoxActionPerformed(evt);
+            }
+        });
 
         PrixSeance.setBackground(new java.awt.Color(0, 0, 0));
         PrixSeance.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
@@ -378,16 +391,14 @@ public class Menu_Employee extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(240, 240, 0));
         jLabel5.setText("€");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Change price");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ChangepriceButton.setBackground(new java.awt.Color(0, 0, 0));
+        ChangepriceButton.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        ChangepriceButton.setText("Change price");
+        ChangepriceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ChangepriceButtonActionPerformed(evt);
             }
         });
-
-        jTextField14.setText("Nouveau Prix");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -396,7 +407,7 @@ public class Menu_Employee extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(239, 239, 239)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ChangepriceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addContainerGap(195, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -405,20 +416,21 @@ public class Menu_Employee extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CategorieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(177, 177, 177))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(62, 62, 62)
-                                .addComponent(PrixSeance, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField14)))
-                        .addGap(23, 23, 23)
+                                .addComponent(PrixSeance, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(NewPriceSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -437,13 +449,13 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NewPriceSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CategorieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addGap(67, 67, 67)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChangepriceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(138, Short.MAX_VALUE))
         );
 
@@ -763,9 +775,29 @@ public class Menu_Employee extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ChangepriceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangepriceButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+        int NewPrice = (int) NewPriceSpinner.getValue();
+        String categorie = CategorieComboBox.getSelectedItem().toString();
+        switch (categorie) {
+            case "Senior":
+                Projet.PromoSenior=NewPrice;
+                break;
+
+            case "Adults":
+                Projet.PromoAdults=NewPrice;
+                break;
+                
+            case "Students":
+                Projet.PromoStudents=NewPrice;
+                break;
+                
+            case "Children":
+                Projet.PromoChildrens=NewPrice;
+                break;
+        }
+    }//GEN-LAST:event_ChangepriceButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -779,13 +811,36 @@ public class Menu_Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ChangeSpotMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeSpotMovieActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+
+
+    }//GEN-LAST:event_ChangeSpotMovieActionPerformed
 
     private void ComboCurrentMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboCurrentMovieActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ComboCurrentMovieActionPerformed
+
+    private void CategorieComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategorieComboBoxActionPerformed
+        // TODO add your handling code here:
+
+        String categorie = CategorieComboBox.getSelectedItem().toString();
+        switch (categorie) {
+            case "Senior":
+                PrixSeance.setText(String.valueOf(Projet.PromoSenior));
+                break;
+            case "Adults":
+                 PrixSeance.setText(String.valueOf(Projet.PromoAdults));
+                break;
+            case "Students":
+                 PrixSeance.setText(String.valueOf(Projet.PromoStudents));
+                break;
+            case "Children":
+                 PrixSeance.setText(String.valueOf(Projet.PromoChildrens));
+                break;
+
+        }
+    }//GEN-LAST:event_CategorieComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -826,10 +881,14 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel Actor1;
     private javax.swing.JLabel Actor2;
     private javax.swing.JLabel Actor3;
+    private javax.swing.JComboBox<String> CategorieComboBox;
+    private javax.swing.JButton ChangeSpotMovie;
+    private javax.swing.JButton ChangepriceButton;
     private javax.swing.JComboBox<String> ComboCurrentMovie;
     private javax.swing.JLabel Director;
     private javax.swing.JList<String> ListMovie;
     private javax.swing.JList<String> MovieList;
+    private javax.swing.JSpinner NewPriceSpinner;
     private javax.swing.JLabel PrixSeance;
     private javax.swing.JLabel Runtime;
     private javax.swing.JTextField ShowHour;
@@ -839,14 +898,11 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame3;
@@ -891,14 +947,10 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-  
-
-  
 }

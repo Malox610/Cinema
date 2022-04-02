@@ -26,7 +26,13 @@ public class Cinema {
         FilmDAO fil =new FilmDAOImp();
        FilmList=fil.getFilm();
        
-       
+       ArrayList<String>FilmName=new ArrayList<>();
+      
+        ///= FilmList.getTitle();
+        FilmList.forEach((m) -> {
+            FilmName.add(m.getTitle());
+        });
+        
         
     }
     
