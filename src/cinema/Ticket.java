@@ -28,14 +28,14 @@ public class Ticket {
        this.m_Show=null;
     }
     
-    public Ticket( int IDTicket , String Date,int nbTicket,int price,Customers idCust, Show idShow)
+    public Ticket( int IDTicket , String Date,int nbTicket,int price,Customers cust, Show show)
     {
         m_IDticket=IDTicket;
         m_Date= Date;
         m_nbTicket=nbTicket;
         m_price=price ;
-        m_Cust=idCust;
-        m_Show=idShow;
+        m_Cust=cust;
+        m_Show=show;
     }
     
      int getIDTicket()
@@ -55,14 +55,16 @@ public class Ticket {
      {
          return m_price ;
      }
-    Customers getIdCust()
+    Customers getCust()
      {
          return m_Cust;
      }
-    Show getIdShow()
+
+    Show getShow()
      {
          return m_Show;
      }
+   
     
     public void setIdticket(int id){
         this.m_IDticket=id;

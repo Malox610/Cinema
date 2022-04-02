@@ -90,6 +90,7 @@ public class CustomersDAOImp implements CustomersDAO {
         return new Customers();
     }
 
+    @Override
     public Customers getCustomersConnexion(String login, String password) {
         Connection conn = null;
         try {
@@ -167,8 +168,9 @@ public class CustomersDAOImp implements CustomersDAO {
         return new Customers();
     }
 
+    @Override
     public ArrayList<Customers> getCustomers() {
-        ArrayList<Customers> custList = new ArrayList<>();
+        ArrayList<Customers> CustList = new ArrayList<>();
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
@@ -179,12 +181,12 @@ public class CustomersDAOImp implements CustomersDAO {
             while (result.next()) {
                 Customers cust = new Customers(result.getString(2), result.getString(4), result.getString(3), result.getInt(5), result.getInt(1));
 
-                custList.add(cust);
+                CustList.add(cust);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
-        return custList;
+        return CustList;
     }
 
     @Override
@@ -194,7 +196,7 @@ public class CustomersDAOImp implements CustomersDAO {
             DataBase dataSource = new DataBase();
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
-            String sqlStatement = "INSERT INTO `customer`(`ID_customer`, `name`, `email`, `password`, `age`) VALUES ('" + cust.getID() + "','" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + "')";
+            String sqlStatement = "INSERT INTO `customer`(`ID_customer`, `name`, `email`, `password`, `age`) VALUES ('" + cust.getIDCustomer() + "','" + cust.getName() + "','" + cust.getEmail() + "','" + cust.getPassword() + "','" + cust.getAge() + "')";
             stmt.executeUpdate(sqlStatement);
             //int rows = stmt.executeUpdate(sqlStatement);
             ResultSet result = stmt.executeQuery("select * from customer");
@@ -209,6 +211,7 @@ public class CustomersDAOImp implements CustomersDAO {
         }
     }
 
+    @Override
     public void modifCustomer(Customers cust) {
         Connection conn = null;
         try {
@@ -218,10 +221,10 @@ public class CustomersDAOImp implements CustomersDAO {
             String sqlStatement = "UPDATE `customer` "
                     + "SET `password` = '" + cust.getPassword()
                     + " 'WHERE "
-                    + "`ID_customer`= " + cust.getID() + " ;";
+                    + "`ID_customer`= " + cust.getIDCustomer() + " ;";
             stmt.executeUpdate(sqlStatement);
             //  System.out.println("rows=" + rows);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
     }

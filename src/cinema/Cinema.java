@@ -14,14 +14,14 @@ import java.util.*;
  */
 public class Cinema {
     public static ArrayList<Show> ShowList =new ArrayList<>();
-    public static ArrayList<Customers> custList =new ArrayList<>();
+    public static ArrayList<Customers> CustList =new ArrayList<>();
     public static ArrayList<Films> FilmList =new ArrayList<>();
     public static ArrayList<Ticket> TicketList = new ArrayList<>();
     
     public Cinema()
     {
        CustomersDAO cust = new CustomersDAOImp();
-       custList=cust.getCustomers();
+       CustList=cust.getCustomers();
        ShowDAO sho =new ShowDAOImp();
        ShowList=sho.getShow();
        FilmDAO fil =new FilmDAOImp();

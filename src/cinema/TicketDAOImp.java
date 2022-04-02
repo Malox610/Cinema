@@ -19,7 +19,7 @@ public class TicketDAOImp implements TicketDAO{
 
     public ArrayList<Ticket> getTick()
     {
-        ArrayList<Ticket> ticketList = new ArrayList<>();
+        ArrayList<Ticket> TicketList = new ArrayList<>();
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
@@ -29,10 +29,9 @@ public class TicketDAOImp implements TicketDAO{
                                 
             while(result.next())
             {
-                for (int i=0; i< Cinema.FilmList.size(); ++i){
-                    for (int j=0; j< Cinema.ShowList.size(); ++j){
-                        for (int k=0; k< Cinema.custList.size(); ++k){
-                            
+                for (int j=0; j< Cinema.ShowList.size(); ++j){
+                    for (int k=0; k< Cinema.CustList.size(); ++k){
+                        if(Cinema.ShowList.get(j).getIDshow()==result.getInt(6) && Cinema.CustList.){
                         }
                     }
                 }
@@ -40,7 +39,7 @@ public class TicketDAOImp implements TicketDAO{
         } catch (SQLException e){
             System.out.println(e);
         }
-        return ticketList;
+        return TicketList;
     }
 
     public void addTicket(Ticket ti)
@@ -55,7 +54,7 @@ public class TicketDAOImp implements TicketDAO{
 
     public Ticket getTick(int id)
     {
-        Ticket ticketCusto;
+        Ticket TicketCusto;
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
@@ -72,7 +71,7 @@ public class TicketDAOImp implements TicketDAO{
         } catch (SQLException e){
             System.out.println(e);
         }
-        return ticketList;
+        return TicketCusto;
     }
 
     public void modifTicket(Ticket ti)

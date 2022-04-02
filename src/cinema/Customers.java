@@ -81,9 +81,11 @@ public class Customers extends Humain {
     public String getName() {return this.m_name;}
     @Override
     public String getPassword() {return this.m_password;}
-    public int getID() {return m_IdCustomers;}
+    public int getIDCustomer() {return m_IdCustomers;}
     public ArrayList<Ticket> getTicket(){return TicketList;}
+    public void setEmail(String email) {this.m_email = email;}
     public void setID(int id) {this.m_IdCustomers = id;}
+    public void setAge(int age) {this.m_age = age;}
     
     public void addTickets(Ticket myticket){
         TicketList.add(myticket);
