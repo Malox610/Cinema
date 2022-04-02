@@ -5,6 +5,8 @@
  */
 package cinema;
 
+import javax.swing.ImageIcon;
+
 
 
 /**
@@ -17,6 +19,9 @@ public class Films {
    protected  String m_genre;
    protected  String m_time;
    protected  String m_synopsis;
+   public ImageIcon format=null;
+   int s=0;
+   byte[]m_photo =null;
    protected  int m_IDmovie =-1 ; 
      // ajouter du le truc pour mettre les images
 
@@ -27,7 +32,7 @@ public class Films {
     {
       
     }
-    public Films (String title , String director , String genre , String time , int IDmovie , String synopsis)
+    public Films (String title , String director , String genre , String time , int IDmovie , String synopsis,byte[]photo)
     {
         //create object for customer who are connected 
         
@@ -37,6 +42,7 @@ public class Films {
          m_time=time;
          m_IDmovie=IDmovie;  
          m_synopsis=synopsis;
+         m_photo = photo ;
     }
     
    public String getTitle()
