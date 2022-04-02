@@ -73,5 +73,9 @@ public class Films {
          return m_IDmovie;
      }
     
+    public byte[]getphoto()
+    {
+    return m_photo;
+    }
     
 }

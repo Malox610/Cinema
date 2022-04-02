@@ -823,8 +823,8 @@ public class Menu_Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
         FilmDAO fil = new FilmDAOImp();
        
-        int NewFilmsID = fil.getFilmsName(jComboBox2.getSelectedItem().toString());
-        int CurrentfilmChoixID = fil.getFilmsName(ComboCurrentMovie.getSelectedItem().toString());
+        int NewFilmsID = fil.getFilmsTitle(jComboBox2.getSelectedItem().toString());
+        int CurrentfilmChoixID = fil.getFilmsTitle(ComboCurrentMovie.getSelectedItem().toString());
         if (CurrentfilmChoixID == Projet.FilmID1) {
             Projet.FilmID1 = NewFilmsID;
         }

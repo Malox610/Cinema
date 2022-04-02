@@ -36,7 +36,7 @@ public class FilmDAOImp implements FilmDAO{
             System.out.println(e);
         }
          return new Films(); 
-    }
+    }  
       
       public ArrayList<Films> getFilm() {
         ArrayList<Films> FilmList = new ArrayList<>();
@@ -66,7 +66,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = " + title );
+            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = '" + title +"';");
             while (result.next()) 
             {  
         

@@ -5,6 +5,7 @@
  */
 package Menu;
 import cinema.*;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -12,6 +13,7 @@ import cinema.*;
  */
 public class MovieDetails extends javax.swing.JFrame {
     private final int  m_id;
+    public ImageIcon Format =null;
     /**
      * Creates new form MoviePage
      * @param idmovie
@@ -39,7 +41,6 @@ public class MovieDetails extends javax.swing.JFrame {
         BackButton = new javax.swing.JButton();
         MovieName = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        AfficheMovie = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         YearMovie = new javax.swing.JLabel();
@@ -48,6 +49,11 @@ public class MovieDetails extends javax.swing.JFrame {
         DirectorMovie = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         GenreMovie = new javax.swing.JLabel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        byte[] imagedata =Movie.getphoto();
+        Format = new ImageIcon(imagedata);
+        image = new javax.swing.JLabel();
         BackButton1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -91,17 +97,6 @@ public class MovieDetails extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
-        javax.swing.GroupLayout AfficheMovieLayout = new javax.swing.GroupLayout(AfficheMovie);
-        AfficheMovie.setLayout(AfficheMovieLayout);
-        AfficheMovieLayout.setHorizontalGroup(
-            AfficheMovieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
-        );
-        AfficheMovieLayout.setVerticalGroup(
-            AfficheMovieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
-        );
-
         jLabel10.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(240, 240, 0));
         jLabel10.setText("RUNTIME :");
@@ -135,16 +130,41 @@ public class MovieDetails extends javax.swing.JFrame {
         GenreMovie.setForeground(new java.awt.Color(240, 240, 0));
         GenreMovie.setText(Movie.getGenre());
 
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        image.setIcon(Format);
+        image.setText("jLabel1");
+        jScrollPane1.setViewportView(image);
+
+        jDesktopPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(AfficheMovie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(124, 124, 124)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
+                        .addGap(166, 166, 166)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel14)
                             .addComponent(jLabel10))
@@ -153,43 +173,41 @@ public class MovieDetails extends javax.swing.JFrame {
                             .addComponent(Runtime)
                             .addComponent(YearMovie)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                        .addGap(189, 189, 189)
                         .addComponent(jLabel21)
                         .addGap(36, 36, 36)
                         .addComponent(GenreMovie))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
+                        .addGap(145, 145, 145)
                         .addComponent(jLabel11)
                         .addGap(36, 36, 36)
                         .addComponent(DirectorMovie)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(88, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(AfficheMovie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(165, 165, 165))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Runtime)
-                            .addComponent(jLabel10))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(YearMovie)
-                            .addComponent(jLabel14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(GenreMovie)
-                            .addComponent(jLabel21))
-                        .addGap(85, 85, 85)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(DirectorMovie))
-                        .addGap(335, 335, 335))))
+                .addContainerGap(110, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Runtime)
+                    .addComponent(jLabel10))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(YearMovie)
+                    .addComponent(jLabel14))
+                .addGap(59, 59, 59)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GenreMovie)
+                    .addComponent(jLabel21))
+                .addGap(85, 85, 85)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(DirectorMovie))
+                .addGap(335, 335, 335))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         BackButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -410,7 +428,7 @@ public class MovieDetails extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,7 +499,6 @@ public class MovieDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AfficheMovie;
     private javax.swing.JButton BackButton;
     private javax.swing.JButton BackButton1;
     private javax.swing.JLabel DirectorMovie;
@@ -490,12 +507,14 @@ public class MovieDetails extends javax.swing.JFrame {
     private javax.swing.JLabel MovieReview;
     private javax.swing.JLabel Runtime;
     private javax.swing.JLabel YearMovie;
+    private javax.swing.JLabel image;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
@@ -512,6 +531,7 @@ public class MovieDetails extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
