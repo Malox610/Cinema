@@ -6,6 +6,7 @@
 package Menu;
 
 import cinema.*;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -45,15 +46,38 @@ public class MoviePage extends javax.swing.JFrame {
         Movie4 = movie.getFilmsID(Projet.FilmID4);
         Movie5 = movie.getFilmsID(Projet.FilmID5);
         Movie6 = movie.getFilmsID(Projet.FilmID6);
+
+        ImageIcon Format1 =null;
+        ImageIcon Format2 =null;
+        ImageIcon Format3 =null;
+        ImageIcon Format4 =null;
+        ImageIcon Format5 =null;
+        ImageIcon Format6 =null;
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         BackButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Affiche1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        byte[] imagedata =Movie1.getphoto();
+        Format1 = new ImageIcon(imagedata);
+        jLabel3 = new javax.swing.JLabel();
         Affiche2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        byte[] imagedata2 =Movie2.getphoto();
+        Format2 = new ImageIcon(imagedata2);
+        jLabel2 = new javax.swing.JLabel();
         Affiche3 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        byte[] imagedata3 =Movie3.getphoto();
+        Format3 = new ImageIcon(imagedata3);
+        jLabel4 = new javax.swing.JLabel();
         Affiche4 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        byte[] imagedata4 =Movie4.getphoto();
+        Format4 = new ImageIcon(imagedata4);
+        jLabel5 = new javax.swing.JLabel();
         MovieName1 = new javax.swing.JLabel();
         MovieYear1 = new javax.swing.JLabel();
         MovieName2 = new javax.swing.JLabel();
@@ -69,10 +93,18 @@ public class MoviePage extends javax.swing.JFrame {
         MovieName5 = new javax.swing.JLabel();
         MovieYear5 = new javax.swing.JLabel();
         Affiche5 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        byte[] imagedata5 =Movie5.getphoto();
+        Format5 = new ImageIcon(imagedata5);
+        jLabel6 = new javax.swing.JLabel();
         Runtime5 = new javax.swing.JLabel();
         MovieYear6 = new javax.swing.JLabel();
         MovieName6 = new javax.swing.JLabel();
         Affiche6 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        byte[] imagedata6 =Movie6.getphoto();
+        Format6 = new ImageIcon(imagedata6);
+        jLabel7 = new javax.swing.JLabel();
         Runtime6 = new javax.swing.JLabel();
         BoutonMovie1 = new javax.swing.JButton();
         BoutonMovie3 = new javax.swing.JButton();
@@ -104,48 +136,88 @@ public class MoviePage extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
+        jLabel3.setIcon(Format1);
+        jLabel3.setText(null);
+        jScrollPane1.setViewportView(jLabel3);
+
         javax.swing.GroupLayout Affiche1Layout = new javax.swing.GroupLayout(Affiche1);
         Affiche1.setLayout(Affiche1Layout);
         Affiche1Layout.setHorizontalGroup(
             Affiche1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(Affiche1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         Affiche1Layout.setVerticalGroup(
             Affiche1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(Affiche1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jLabel2.setIcon(Format2);
+        jLabel2.setText(null);
+        jScrollPane2.setViewportView(jLabel2);
 
         javax.swing.GroupLayout Affiche2Layout = new javax.swing.GroupLayout(Affiche2);
         Affiche2.setLayout(Affiche2Layout);
         Affiche2Layout.setHorizontalGroup(
             Affiche2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(Affiche2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         Affiche2Layout.setVerticalGroup(
             Affiche2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(Affiche2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jLabel4.setIcon(Format3);
+        jLabel4.setText(null);
+        jScrollPane3.setViewportView(jLabel4);
 
         javax.swing.GroupLayout Affiche3Layout = new javax.swing.GroupLayout(Affiche3);
         Affiche3.setLayout(Affiche3Layout);
         Affiche3Layout.setHorizontalGroup(
             Affiche3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(Affiche3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3)
+                .addContainerGap())
         );
         Affiche3Layout.setVerticalGroup(
             Affiche3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(Affiche3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jLabel5.setIcon(Format4);
+        jLabel5.setText(null);
+        jScrollPane4.setViewportView(jLabel5);
 
         javax.swing.GroupLayout Affiche4Layout = new javax.swing.GroupLayout(Affiche4);
         Affiche4.setLayout(Affiche4Layout);
         Affiche4Layout.setHorizontalGroup(
             Affiche4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(Affiche4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4)
+                .addContainerGap())
         );
         Affiche4Layout.setVerticalGroup(
             Affiche4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(Affiche4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4)
+                .addContainerGap())
         );
 
         MovieName1.setFont(new java.awt.Font("Showcard Gothic", 0, 16)); // NOI18N
@@ -205,15 +277,24 @@ public class MoviePage extends javax.swing.JFrame {
         MovieYear5.setForeground(new java.awt.Color(240, 240, 0));
         MovieYear5.setText(String.valueOf(Projet.FilmID5));
 
+        jLabel6.setIcon(Format5);
+        jScrollPane5.setViewportView(jLabel6);
+
         javax.swing.GroupLayout Affiche5Layout = new javax.swing.GroupLayout(Affiche5);
         Affiche5.setLayout(Affiche5Layout);
         Affiche5Layout.setHorizontalGroup(
             Affiche5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 236, Short.MAX_VALUE)
+            .addGroup(Affiche5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                .addContainerGap())
         );
         Affiche5Layout.setVerticalGroup(
             Affiche5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(Affiche5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         Runtime5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -228,15 +309,24 @@ public class MoviePage extends javax.swing.JFrame {
         MovieName6.setForeground(new java.awt.Color(240, 240, 0));
         MovieName6.setText(Movie6.getTitle());
 
+        jLabel7.setIcon(Format6);
+        jScrollPane6.setViewportView(jLabel7);
+
         javax.swing.GroupLayout Affiche6Layout = new javax.swing.GroupLayout(Affiche6);
         Affiche6.setLayout(Affiche6Layout);
         Affiche6Layout.setHorizontalGroup(
             Affiche6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 235, Short.MAX_VALUE)
+            .addGroup(Affiche6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                .addContainerGap())
         );
         Affiche6Layout.setVerticalGroup(
             Affiche6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(Affiche6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         Runtime6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -339,13 +429,14 @@ public class MoviePage extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(53, 53, 53)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(MovieName3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 15, Short.MAX_VALUE))
                                     .addComponent(Affiche3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGap(80, 80, 80)
-                                        .addComponent(Runtime3))))
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MovieName3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGap(80, 80, 80)
+                                                .addComponent(Runtime3)))
+                                        .addGap(0, 15, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                                 .addComponent(BoutonMovie3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(41, 41, 41))))
@@ -554,10 +645,10 @@ public class MoviePage extends javax.swing.JFrame {
 
     private void BoutonMovie1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie1ActionPerformed
         // TODO add your handling code here:
-         MovieDetails a = new MovieDetails(Projet.FilmID1);
+        MovieDetails a = new MovieDetails(Projet.FilmID1);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie1ActionPerformed
 
     private void BackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButton1ActionPerformed
@@ -567,42 +658,42 @@ public class MoviePage extends javax.swing.JFrame {
     private void BoutonMovie3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie3ActionPerformed
         // TODO add your handling code here:
 
-         MovieDetails a = new MovieDetails(Projet.FilmID3);
+        MovieDetails a = new MovieDetails(Projet.FilmID3);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie3ActionPerformed
 
     private void BoutonMovie2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie2ActionPerformed
         // TODO add your handling code here:
-         MovieDetails a = new MovieDetails(Projet.FilmID2);
+        MovieDetails a = new MovieDetails(Projet.FilmID2);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie2ActionPerformed
 
     private void BoutonMovie4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie4ActionPerformed
         // TODO add your handling code here:
-         MovieDetails a = new MovieDetails(Projet.FilmID4);
+        MovieDetails a = new MovieDetails(Projet.FilmID4);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie4ActionPerformed
 
     private void BoutonMovie5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie5ActionPerformed
         // TODO add your handling code here:
-         MovieDetails a = new MovieDetails(Projet.FilmID5);
+        MovieDetails a = new MovieDetails(Projet.FilmID5);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie5ActionPerformed
 
     private void BoutonMovie6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonMovie6ActionPerformed
         // TODO add your handling code here:
-         MovieDetails a = new MovieDetails(Projet.FilmID6);
+        MovieDetails a = new MovieDetails(Projet.FilmID6);
         a.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_BoutonMovie6ActionPerformed
 
     /**
@@ -674,8 +765,20 @@ public class MoviePage extends javax.swing.JFrame {
     private javax.swing.JLabel Runtime5;
     private javax.swing.JLabel Runtime6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     // End of variables declaration//GEN-END:variables
 }
