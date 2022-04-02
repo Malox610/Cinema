@@ -29,11 +29,12 @@ public class TicketDAOImp implements TicketDAO{
                                 
             while(result.next())
             {
-                for (int k=0; k< Cinema.CustList.size(); ++k){
-                    if(Cinema.CustList.get(k).getIDCustomer()==result.getInt(1)){
-                        Ticket tick = new Ticket(result.getInt(1),result.getString(2),result.getInt(4),result.getInt(3) ,Cinema.CustList.get(k), Cinema.ShowList.get(j));
-                        Cinema.CustList.get(k).getTicket().add(tick);
-                        TicketList.add(tick);
+                for (int j=0; j< Cinema.ShowList.size(); ++j){
+                    for (int k=0; k< Cinema.CustList.size(); ++k){
+                        if(Cinema.ShowList.get(j).getIDshow()==result.getInt(6) && Cinema.CustList.get(k).getIDCustomer()==result.getInt(1)){
+                            Ticket tick = new Ticket(result.getInt(1),result.getString(2),result.getInt(4),result.getInt(3) ,Cinema.CustList.get(k), Cinema.ShowList.get(j));
+                            Cinema.CustList.get(k).getTicket().add(tick);
+                        }
                     }
                 }
             }
