@@ -15,12 +15,18 @@ import java.util.*;
 public class Cinema {
     public static ArrayList<Show> ShowList =new ArrayList<>();
     public static ArrayList<Customers> custList =new ArrayList<>();
-    public static Customers cust =new Customers();
+    public static ArrayList<Films> FilmList =new ArrayList<>();
     
     public Cinema()
     {
         CustomersDAO cust = new CustomersDAOImp();
         custList=cust.getCustomers();
+        ShowDAO sho =new ShowDAOImp();
+       ShowList=sho.getShow();
+        FilmDAO fil =new FilmDAOImp();
+       FilmList=fil.getFilm();
+       
+       
         
     }
     

@@ -39,30 +39,30 @@ public class Films {
          m_synopsis=synopsis;
     }
     
-    String getTitle()
+   public String getTitle()
     {
     return m_title ;
     }
     
-    String getDirector()
+  public  String getDirector()
     {
     return m_director ;
     }
     
-    String getGenre()
+  public  String getGenre()
     {
     return m_genre ;
     }
-     String getTime()
+  public   String getTime()
     {
     return m_time ;
     }
-     String getSynopsis()
+  public   String getSynopsis()
      {
      return m_synopsis;
      }
      
-     int getIDMovie()
+    public int getIDMovie()
      {
          return m_IDmovie;
      }

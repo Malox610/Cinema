@@ -5,6 +5,8 @@
  */
 package cinema;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author esmil
@@ -12,5 +14,7 @@ package cinema;
 public interface FilmDAO {
     
     public Films getFilmsID(int id);
+    public ArrayList<Films> getFilm() ;
+     public int getFilmsName(String Name);
     
 }

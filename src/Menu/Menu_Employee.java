@@ -5,6 +5,10 @@
  */
 package Menu;
 
+import cinema.FilmDAO;
+import cinema.FilmDAOImp;
+import cinema.Films;
+
 /**
  *
  * @author esmil
@@ -16,6 +20,7 @@ public class Menu_Employee extends javax.swing.JFrame {
      */
     public Menu_Employee() {
         initComponents();
+       
     }
 
     /**
@@ -46,26 +51,29 @@ public class Menu_Employee extends javax.swing.JFrame {
         ShowRoom = new javax.swing.JSpinner();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jInternalFrame3 = new javax.swing.JInternalFrame();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
-        jLabel30 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        FilmDAO movie = new FilmDAOImp();
+
+        Films Movie1 = new Films();
+        Films Movie2 = new Films();
+        Films Movie3 = new Films();
+        Films Movie4 = new Films();
+        Films Movie5 = new Films();
+        Films Movie6 = new Films();
+
+        Movie1 = movie.getFilmsID(Projet.FilmID1);
+        Movie2 = movie.getFilmsID(Projet.FilmID2);
+        Movie3 = movie.getFilmsID(Projet.FilmID3);
+        Movie4 = movie.getFilmsID(Projet.FilmID4);
+        Movie5 = movie.getFilmsID(Projet.FilmID5);
+        Movie6 = movie.getFilmsID(Projet.FilmID6);
+        String [] listeFil={Movie1.getTitle(),Movie2.getTitle(),Movie3.getTitle(),Movie4.getTitle(),Movie5.getTitle(),Movie6.getTitle()};
+        ComboCurrentMovie = new javax.swing.JComboBox<>();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
@@ -221,7 +229,7 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addGap(95, 95, 95))
         );
 
-        jTabbedPane2.addTab("tab1", jPanel3);
+        jTabbedPane2.addTab("", jPanel3);
 
         jTabbedPane1.addTab("Add show", jTabbedPane2);
 
@@ -229,13 +237,6 @@ public class Menu_Employee extends javax.swing.JFrame {
 
         jInternalFrame3.setBackground(new java.awt.Color(0, 0, 0));
         jInternalFrame3.setVisible(true);
-
-        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel14.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel14.setText("TITLE :");
-
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
@@ -246,113 +247,58 @@ public class Menu_Employee extends javax.swing.JFrame {
             }
         });
 
-        jLabel19.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel19.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel19.setText("DIRECTOR :");
-
-        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel15.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel15.setText("YEAR :");
-
-        jLabel17.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel17.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel17.setText("HOur :");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jLabel18.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel18.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel18.setText("review :");
-
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
         jLabel29.setBackground(new java.awt.Color(0, 0, 0));
         jLabel29.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel29.setText("ADd movie");
+        jLabel29.setText("Change movie");
 
         jButton6.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
         jButton6.setText("BACK");
 
-        jLabel30.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel30.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel30.setText("ACTOR1 :");
-
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
         jLabel31.setBackground(new java.awt.Color(0, 0, 0));
         jLabel31.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel31.setText("ACTOR2 :");
-
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel31.setText("Current Movie:");
 
         jLabel32.setBackground(new java.awt.Color(0, 0, 0));
         jLabel32.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(240, 240, 0));
-        jLabel32.setText("ACTOR3 :");
+        jLabel32.setText("ALL movie :");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ComboCurrentMovie.setModel(new javax.swing.DefaultComboBoxModel<>(listeFil));
+        ComboCurrentMovie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboCurrentMovieActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrame3Layout = new javax.swing.GroupLayout(jInternalFrame3.getContentPane());
         jInternalFrame3.getContentPane().setLayout(jInternalFrame3Layout);
         jInternalFrame3Layout.setHorizontalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
+            .addGroup(jInternalFrame3Layout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(462, 462, 462)
                 .addComponent(jLabel29)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(557, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
-                .addContainerGap(424, Short.MAX_VALUE)
-                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
                         .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jInternalFrame3Layout.createSequentialGroup()
-                                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel30))
-                                .addGap(77, 77, 77)
-                                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jInternalFrame3Layout.createSequentialGroup()
-                                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel31)
-                                    .addComponent(jLabel32))
-                                .addGap(77, 77, 77)
-                                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(164, 164, 164)
-                        .addComponent(jLabel18)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(146, 146, 146))
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel31))
+                        .addGap(60, 60, 60)
+                        .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ComboCurrentMovie, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBox2, 0, 318, Short.MAX_VALUE))
+                        .addGap(409, 409, 409))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(537, 537, 537))))
         );
         jInternalFrame3Layout.setVerticalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -361,44 +307,17 @@ public class Menu_Employee extends javax.swing.JFrame {
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInternalFrame3Layout.createSequentialGroup()
-                        .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel19)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jInternalFrame3Layout.createSequentialGroup()
-                            .addComponent(jLabel18)
-                            .addGap(175, 175, 175))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                    .addComponent(ComboCurrentMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel31))
+                .addGap(132, 132, 132)
                 .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(91, 91, 91)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(148, 148, 148)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addGap(158, 158, 158))
         );
 
         jTabbedPane3.addTab("", jInternalFrame3);
@@ -848,10 +767,6 @@ public class Menu_Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -867,6 +782,10 @@ public class Menu_Employee extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void ComboCurrentMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboCurrentMovieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboCurrentMovieActionPerformed
 
     /**
      * @param args the command line arguments
@@ -907,6 +826,7 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel Actor1;
     private javax.swing.JLabel Actor2;
     private javax.swing.JLabel Actor3;
+    private javax.swing.JComboBox<String> ComboCurrentMovie;
     private javax.swing.JLabel Director;
     private javax.swing.JList<String> ListMovie;
     private javax.swing.JList<String> MovieList;
@@ -927,6 +847,7 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame3;
     private javax.swing.JLabel jLabel1;
@@ -934,12 +855,7 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -947,7 +863,6 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -965,7 +880,6 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
@@ -975,18 +889,10 @@ public class Menu_Employee extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;

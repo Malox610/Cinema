@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -35,6 +36,26 @@ public class FilmDAOImp implements FilmDAO{
             System.out.println(e);
         }
          return new Films(); 
+    }
+      
+      public ArrayList<Films> getFilm() {
+        ArrayList<Films> FilmList = new ArrayList<>();
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("select * from Movie");
+
+            while (result.next()) {//String title , String director , String genre , String time , int IDmovie , String synopsis
+                Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6));
+
+                FilmList.add(fil);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return FilmList;
     }
     
        public int getFilmsName(String Name)
