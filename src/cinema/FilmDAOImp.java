@@ -27,7 +27,7 @@ public class FilmDAOImp implements FilmDAO{
             ResultSet result = stmt.executeQuery("SELECT * FROM Movie WHERE `ID_movie` = " + id);
             while (result.next()) 
             {  // String title , String director , String genre , String time , int IDmovie // je sais pas ce que les result correspond a quoi
-                Films fil =new Films (result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6));
+                Films fil =new Films (result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
                 
                 return fil ;
                 
@@ -49,7 +49,7 @@ public class FilmDAOImp implements FilmDAO{
             ResultSet result = stmt.executeQuery("select * from Movie");
 
             while (result.next()) {//String title , String director , String genre , String time , int IDmovie , String synopsis
-                Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6));
+                Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
 
                 FilmList.add(fil);
             }
