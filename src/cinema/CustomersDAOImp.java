@@ -15,6 +15,7 @@ import java.util.ArrayList;
  */
 public class CustomersDAOImp implements CustomersDAO {
 
+    @Override
     public Customers getCustomerId(int id) {
         Connection conn = null;
         try {
@@ -206,7 +207,7 @@ public class CustomersDAOImp implements CustomersDAO {
                 }
             }
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
     }

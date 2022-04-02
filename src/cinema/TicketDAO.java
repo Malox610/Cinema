@@ -17,5 +17,4 @@ public interface TicketDAO {
     public Ticket getTick(int id);
     public void addTicket(Ticket ti);
     public void modifTicket(Ticket ti);
-    public void deleteTicket(Ticket ti);
 }

@@ -27,7 +27,7 @@ public class FilmDAOImp implements FilmDAO{
             ResultSet result = stmt.executeQuery("SELECT * FROM Movie WHERE `ID_movie` = " + id);
             while (result.next()) 
             {  // String title , String director , String genre , String time , int IDmovie // je sais pas ce que les result correspond a quoi
-                Films fil =new Films (result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
+                Films fil =new Films (result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6));
                 
                 return fil ;
                 
@@ -36,8 +36,9 @@ public class FilmDAOImp implements FilmDAO{
             System.out.println(e);
         }
          return new Films(); 
-    }  
+    }
       
+      @Override
       public ArrayList<Films> getFilm() {
         ArrayList<Films> FilmList = new ArrayList<>();
         Connection conn = null;
@@ -48,16 +49,17 @@ public class FilmDAOImp implements FilmDAO{
             ResultSet result = stmt.executeQuery("select * from Movie");
 
             while (result.next()) {//String title , String director , String genre , String time , int IDmovie , String synopsis
-                Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
+                Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6));
 
                 FilmList.add(fil);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return FilmList;
     }
     
+      @Override
        public int getFilmsTitle(String title)
     {
         int id =0 ;
@@ -66,7 +68,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = '" + title +"';");
+            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = " + title );
             while (result.next()) 
             {  
         

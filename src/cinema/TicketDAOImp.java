@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class TicketDAOImp implements TicketDAO{
 
+    @Override
     public ArrayList<Ticket> getTick()
     {
         ArrayList<Ticket> TicketList = new ArrayList<>();
@@ -44,16 +45,24 @@ public class TicketDAOImp implements TicketDAO{
         return TicketList;
     }
 
+    @Override
     public void addTicket(Ticket ti)
     {
-      
+        Connection con = null;
+        try {
+            DataBase dataSource = new DataBase();
+            con = dataSource.createConnection();
+            Statement stmt = con.createStatement();
+            String sqlStatement = "INSERT INTO ticket (`ID_Ticket`, `date`, `price`, `nb_ticket`, `id_customer`, `id_show`) "
+                    + "VALUES ('" + ti.getIDTicket() + "', '" + ti.getDate() + "', '" + ti.getprice() + "', '" + ti.getnbTicket() + "', '" + ti.getCust().getIDCustomer() + "', '" + ti.getShow().getIDshow() + "');";
+            stmt.executeUpdate(sqlStatement);
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
-    public void deleteTicket(Ticket ti)
-    {
-
-    }
-
+    @Override
     public Ticket getTick(int id)
     {
         Connection conn = null;
@@ -74,8 +83,21 @@ public class TicketDAOImp implements TicketDAO{
         return new Ticket();
     }
 
+    @Override
     public void modifTicket(Ticket ti)
     {
-
+     Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            String sqlStatement = "UPDATE ticket " + 
+                    "ID =" + ti.getIDTicket() + "Date =" + ti.getDate() + "NbTicket =" + ti.getnbTicket() + "Price =" + ti.getCust().m_IdCustomers + "Show" + ti.getShow().getIDshow()
+                    + "WHERE " + "id =" + ti.getIDTicket();
+            
+            stmt.executeUpdate(sqlStatement);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 }

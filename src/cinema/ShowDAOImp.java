@@ -5,6 +5,7 @@
  */
 package cinema;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,12 +33,13 @@ public class ShowDAOImp implements ShowDAO {
                 //int IDshow , String Date,int nbseat,int room ,int idmovie
 
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return ShowList;
     }
 
+    @Override
     public void addShow(Show sho) {
         Connection con = null;
         try {
@@ -48,7 +50,7 @@ public class ShowDAOImp implements ShowDAO {
                     + "VALUES ('" + sho.getIDshow() + "', '" + sho.getDate() + "', '" + sho.getNbSeat() + "', '" + sho.getRoom() + "', '" + sho.getIdMovie() + "');";
             stmt.executeUpdate(sqlStatement);
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
     }
@@ -72,11 +74,12 @@ public class ShowDAOImp implements ShowDAO {
                  JOptionPane.showMessageDialog(null, "This show can't be cancelled");
             }
 
-        } catch (Exception e) {
+        } catch (HeadlessException | SQLException e) {
             System.out.println(e);
         }
     }
     
+    @Override
     public void UpdateSeat(Show sho)
     {
      Connection conn = null;
@@ -90,10 +93,8 @@ public class ShowDAOImp implements ShowDAO {
                     + "`show`.`ID_show`= " + sho.getIDshow() + " ;";
             stmt.executeUpdate(sqlStatement);
             //  System.out.println("rows=" + rows);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
-    
     }
-
 }
