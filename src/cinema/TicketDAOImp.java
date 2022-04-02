@@ -19,9 +19,27 @@ public class TicketDAOImp implements TicketDAO{
 
     public ArrayList<Ticket> getTick()
     {
-        ArrayList<Ticket> ticketList= new ArrayList<>();
+        ArrayList<Ticket> ticketList = new ArrayList<>();
         Connection conn = null;
-
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("SELECT * from ticket");
+                                
+            while(result.next())
+            {
+                for (int i=0; i< Cinema.FilmList.size(); ++i){
+                    for (int j=0; j< Cinema.ShowList.size(); ++j){
+                        for (int k=0; k< Cinema.custList.size(); ++k){
+                            
+                        }
+                    }
+                }
+            }
+        } catch (SQLException e){
+            System.out.println(e);
+        }
         return ticketList;
     }
 
@@ -37,7 +55,24 @@ public class TicketDAOImp implements TicketDAO{
 
     public Ticket getTick(int id)
     {
-        return null;
+        Ticket ticketCusto;
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("SELECT t.date, t.nbticket, t.id_customer, t.id_show FROM ticket t" 
+                                + "INNER JOIN show s ON s.id_show=t.id_show" + "INNER JOIN customer c ON c.id_customer=t.id_customer"
+                                + "WHERE s.date = t.date");
+                                
+            while(result.next())
+            {
+                
+            }
+        } catch (SQLException e){
+            System.out.println(e);
+        }
+        return ticketList;
     }
 
     public void modifTicket(Ticket ti)

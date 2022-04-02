@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class Show {
     protected int m_IDshow;
-   protected String m_Date;
-   protected int m_nbseat;
-   protected int m_room ;
+    protected String m_Date;
+    protected int m_nbseat;
+    protected int m_room ;
     protected Films m_movie;
     
     public Show()

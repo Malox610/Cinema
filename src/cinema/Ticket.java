@@ -18,7 +18,7 @@ public class Ticket {
    private Customers m_Cust;
    private Show m_Show;
    
-     public Ticket()
+    public Ticket()
     {
        this.m_IDticket=0;
        this.m_Date="";
