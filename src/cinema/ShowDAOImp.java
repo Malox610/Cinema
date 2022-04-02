@@ -30,9 +30,7 @@ public class ShowDAOImp implements ShowDAO {
 
             while (result.next()) {
                 //int IDshow , String Date,int nbseat,int room ,int idmovie
-                Show s = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), result.getInt(5));
 
-                ShowList.add(s);
             }
         } catch (Exception e) {
             System.out.println(e);

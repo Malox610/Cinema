@@ -27,7 +27,7 @@ public class Cinema {
        FilmDAO fil =new FilmDAOImp();
        FilmList=fil.getFilm();      
        TicketDAOImp tick = new TicketDAOImp();
-       TicketList = tick.get
+       TicketList = tick.getTick();
     }
     
     

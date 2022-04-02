@@ -13,9 +13,9 @@ package cinema;
 import java.util.ArrayList;
 
 public interface TicketDAO {
-    public ArrayList<Ticket> getApp();
-    public Ticket getApp(int id);
-    public void addAppointment(Ticket ap);
-    public void modifAppointment(Ticket ap);
-    public void deleteAppointment(Ticket ap);
+    public ArrayList<Ticket> getTick();
+    public Ticket getTick(int id);
+    public void addTicket(Ticket ti);
+    public void modifTicket(Ticket ti);
+    public void deleteTicket(Ticket ti);
 }
