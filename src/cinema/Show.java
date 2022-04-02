@@ -16,20 +16,20 @@ public class Show {
    protected String m_Date;
    protected int m_nbseat;
    protected int m_room ;
-    protected int m_idmovie;
+    protected Films m_movie;
     
     public Show()
     {
     
     }
     
-    public Show( int IDshow , String Date,int nbseat,int room ,int idmovie)
+    public Show( int IDshow , String Date,int nbseat,int room ,Films idmovie)
     {
         m_IDshow=IDshow;
         m_Date= Date;
         m_nbseat=nbseat;
         m_room =room ;
-        m_idmovie=idmovie;
+        m_movie=idmovie;
     
     }
     
@@ -48,13 +48,13 @@ public class Show {
          return  m_nbseat;
      }
      
-     int getRoom()
+    public int getRoom()
      {
       return m_room ;
      }
-    int getIdMovie()
+    public Films getIdMovie()
      {
-         return m_idmovie;
+         return m_movie;
      }
     
     void setNbSeat(int nbticket)

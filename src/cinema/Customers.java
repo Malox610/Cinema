@@ -6,6 +6,7 @@
 package cinema;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,40 +17,26 @@ public class Customers extends Humain {
     String m_email;
     int m_age;
     int m_IdCustomers = -1;
+    ArrayList<Ticket> TicketList = new ArrayList<>();
 
     public Customers() { //For guest 
-
+        super("","");
+        this.m_age=0;
+        this.m_email="";
+        this.m_IdCustomers=0;
     }
 
-    public Customers(String name, String Password, String email, int age, int id) {
+    public Customers(String name, String password, String email, int age, int id) {
         //create object for customer who are connected 
-
-        this.m_name = name;
-        this.m_password = Password;
+        super(name, password);
         m_email = email;
         m_age = age;
         m_IdCustomers = id;
         /*  SecureRandom random = new SecureRandom();
          m_IdCustomers= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja 
-        
          */
     }
 
-    public String getEmail() {
-        return m_email;
-    }
-
-    public int getAge() {
-        return m_age;
-    }
-
-    public String getName() {
-        return this.m_name;
-    }
-
-    public String getPassword() {
-        return this.m_password;
-    }
 
     public void setPassword(String pass) {
         
@@ -87,13 +74,29 @@ public class Customers extends Humain {
         }
         this.m_password = chiffre;
     }
-
-    public int getID() {
-        return m_IdCustomers;
+    
+    public String getEmail() {return m_email;}
+    public int getAge() {return m_age;}
+    @Override
+    public String getName() {return this.m_name;}
+    @Override
+    public String getPassword() {return this.m_password;}
+    public int getID() {return m_IdCustomers;}
+    public ArrayList<Ticket> getTicket(){return TicketList;}
+    public void setID(int id) {this.m_IdCustomers = id;}
+    
+    public void addTickets(Ticket myticket){
+        TicketList.add(myticket);
     }
-
-    public void setID(int id) {
-        this.m_IdCustomers = id;
+    
+    @Override
+    public String toString(){
+        String str="";
+        for(Ticket tick: TicketList)
+        {
+            str += " " + tick.toString();
+        }
+        return "Customer -" + "Name" + m_name + ", email" + m_email + ", age" + m_age + ", id" + m_IdCustomers + ", password" + m_password + "-";
     }
 
 }

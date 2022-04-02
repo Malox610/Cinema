@@ -16,24 +16,18 @@ public class Cinema {
     public static ArrayList<Show> ShowList =new ArrayList<>();
     public static ArrayList<Customers> custList =new ArrayList<>();
     public static ArrayList<Films> FilmList =new ArrayList<>();
+    public static ArrayList<Ticket> TicketList = new ArrayList<>();
     
     public Cinema()
     {
-        CustomersDAO cust = new CustomersDAOImp();
-        custList=cust.getCustomers();
-        ShowDAO sho =new ShowDAOImp();
+       CustomersDAO cust = new CustomersDAOImp();
+       custList=cust.getCustomers();
+       ShowDAO sho =new ShowDAOImp();
        ShowList=sho.getShow();
-        FilmDAO fil =new FilmDAOImp();
-       FilmList=fil.getFilm();
-       
-       ArrayList<String>FilmName=new ArrayList<>();
-      
-        ///= FilmList.getTitle();
-        FilmList.forEach((m) -> {
-            FilmName.add(m.getTitle());
-        });
-        
-        
+       FilmDAO fil =new FilmDAOImp();
+       FilmList=fil.getFilm();      
+       TicketDAOImp tick = new TicketDAOImp();
+       TicketList = tick.get
     }
     
     

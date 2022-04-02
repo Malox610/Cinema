@@ -14,6 +14,17 @@ abstract public class Humain {
   protected String m_name ;
   protected String m_password;
   
+  public Humain(String name, String pass){
+      this.m_name=name;
+      this.m_password=pass;
+  }
   
-    
+  public String getName(){ return m_name;}
+  public String getPassword(){ return m_password;}
+
+
+  @Override
+  public String toString(){
+      return "Humain -" + "Name" + m_name + ", password" + m_password + "-";
+  }
 }

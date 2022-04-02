@@ -11,32 +11,36 @@ package cinema;
  */
 public class Ticket {
     
-  protected int m_IDTicket;
-   protected String m_Date;
-   protected int m_nbTicket;
-   protected int m_price;
-   protected int m_idCust;
-   protected int m_idShow;
+   private int m_IDticket;
+   private String m_Date;
+   private int m_nbTicket;
+   private int m_price;
+   private Customers m_Cust;
+   private Show m_Show;
    
      public Ticket()
     {
-    
+       this.m_IDticket=0;
+       this.m_Date="";
+       this.m_nbTicket=0;
+       this.m_price=0;
+       this.m_Cust=null;
+       this.m_Show=null;
     }
     
-    public Ticket( int IDTicket , String Date,int nbTicket,int price,int idCust ,int idShow)
+    public Ticket( int IDTicket , String Date,int nbTicket,int price,Customers idCust, Show idShow)
     {
-        m_IDTicket=IDTicket;
+        m_IDticket=IDTicket;
         m_Date= Date;
         m_nbTicket=nbTicket;
         m_price=price ;
-        m_idCust=idCust;
-        m_idShow=idShow;
-    
+        m_Cust=idCust;
+        m_Show=idShow;
     }
     
      int getIDTicket()
      {
-         return m_IDTicket;
+         return m_IDticket;
      }
      
     String getDate()
@@ -51,16 +55,42 @@ public class Ticket {
      {
          return m_price ;
      }
-    int getIdCust()
+    Customers getIdCust()
      {
-         return m_idCust;
+         return m_Cust;
      }
-    int getIdShow()
+    Show getIdShow()
      {
-         return m_idShow;
+         return m_Show;
      }
     
-   
-   
+    public void setIdticket(int id){
+        this.m_IDticket=id;
+    }
+    
+    public void setPrice(int price){
+        this.m_price=price;
+    }
+        
+    public void setnbTicket(int nbticket){
+        this.m_nbTicket=nbticket;
+    }
+    
+    public void setDate(String date){
+        this.m_Date = date;
+    }
+    
+    public void setCustomer(Customers custo){
+        this.m_Cust=custo;
+    }
+    
+    public void setShow(Show showe){
+        this.m_Show=showe;
+    }
+  
+
+    public String toString(){
+        return "Ticket -" + "Movie: " + m_Show.m_movie.m_title + "Customer: " + m_Cust.m_name + "Date: " + "Ticket id: " + m_IDticket + "Price: " + m_price + "Number of people: " + m_nbTicket+ "-";
+    }
    
 }
