@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cinema;
+import javax.swing.ImageIcon;
 
 
 
@@ -18,6 +19,7 @@ public class Films {
    protected  String m_time;
    protected  String m_synopsis;
    protected  int m_IDmovie =-1 ; 
+   byte[]m_photo =null;
      // ajouter du le truc pour mettre les images
 
     /**
@@ -27,7 +29,7 @@ public class Films {
     {
       
     }
-    public Films (String title , String director , String genre , String time , int IDmovie , String synopsis)
+    public Films (String title , String director , String genre , String time , int IDmovie , String synopsis,byte[]photo )
     {
         //create object for customer who are connected 
         
@@ -37,6 +39,7 @@ public class Films {
          m_time=time;
          m_IDmovie=IDmovie;  
          m_synopsis=synopsis;
+         m_photo = photo;
     }
     
     public String getTitle()
@@ -66,6 +69,10 @@ public class Films {
      {
          return m_IDmovie;
      }
+    public byte[]getphoto()
+    {
+    return m_photo;
+    }
     
     
 }
