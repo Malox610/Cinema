@@ -218,7 +218,6 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                                                   <Component id="Runtime3" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -332,18 +331,17 @@
                                               <Component id="Runtime5" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="Runtime6" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Affiche6" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="Affiche6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="BoutonMovie3" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <Component id="BoutonMovie4" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <Component id="BoutonMovie5" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="BoutonMovie6" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="BoutonMovie3" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                          <Component id="BoutonMovie4" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                          <Component id="BoutonMovie5" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
