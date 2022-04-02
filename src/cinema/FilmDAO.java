@@ -15,6 +15,6 @@ public interface FilmDAO {
     
     public Films getFilmsID(int id);
     public ArrayList<Films> getFilm() ;
-     public int getFilmsName(String Name);
+     public int getFilmsTitle(String Title);
     
 }

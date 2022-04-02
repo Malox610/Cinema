@@ -13,23 +13,19 @@ import java.security.SecureRandom;
  */
 public class Employee extends Humain {
     
-      String m_job;
-      int m_IDEmployee =-1 ;
+    String m_job;
+    int m_IDEmployee =-1 ;
     
-    public Employee (String name , String Password , String job)
+    public Employee (String name, String Password, String job)
     {
         //create object for customer who are connected
-        
-        this.m_name= name ;
-        this.m_password=Password;
+        super(name,Password);
         m_job=job;
          SecureRandom random = new SecureRandom();
          m_IDEmployee= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja            
     }
-
-    Employee(){
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public Employee()
+    {
     }
-    
-    
 }
