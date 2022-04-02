@@ -31,7 +31,8 @@ public class TicketDAOImp implements TicketDAO{
             {
                 for (int j=0; j< Cinema.ShowList.size(); ++j){
                     for (int k=0; k< Cinema.CustList.size(); ++k){
-                        if(Cinema.ShowList.get(j).getIDshow()==result.getInt(6) && Cinema.CustList.){
+                        if(Cinema.ShowList.get(j).getIDshow()==result.getInt(6) && Cinema.CustList.get(k).getIDCustomer()==result.getInt(1)){
+                            
                         }
                     }
                 }
