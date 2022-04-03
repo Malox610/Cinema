@@ -33,17 +33,17 @@ public class Show {
     
     }
     
-     int getIDshow()
+     public int getIDshow()
      {
          return m_IDshow;
      }
      
-    String getDate()
+    public String getDate()
     {
     return m_Date ;
     }
     
-     int getNbSeat()
+   public  int getNbSeat()
      {
          return  m_nbseat;
      }
@@ -57,7 +57,7 @@ public class Show {
          return m_movie;
      }
     
-    void setNbSeat(int nbticket)
+  public  void setNbSeat(int nbticket)
     {
         int newnombre=m_nbseat-nbticket;
         if(newnombre>=0)
