@@ -27,7 +27,7 @@ public class ShowDAOImp implements ShowDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from show");
+            ResultSet result = stmt.executeQuery("SELECT * FROM `show` ");
 
             while (result.next()) {//Int idshow , String date , int nbseat , int room , int IDmovie
                 for(int i=0; i < Cinema.FilmList.size();++i){
@@ -51,9 +51,10 @@ public class ShowDAOImp implements ShowDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT * FROM show WHERE `ID_movie` = " + id);
+            ResultSet result = stmt.executeQuery("SELECT * FROM `show` WHERE `ID_movie` = " + id);
             while (result.next()) {//Int idshow , String date , int nbseat , int room , int IDmovie
-                    Show showe = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.FilmList.get(id));
+                FilmDAO fil = new FilmDAOImp();
+                    Show showe = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4),fil.getFilmsID(result.getInt(5)));
                     ShowList.add(showe);   
             }
         } catch (SQLException e) {

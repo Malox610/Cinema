@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Menu;
-import Cinema.*;
+import cinema.*;
 import cinema.Films;
 import javax.swing.ImageIcon;
 

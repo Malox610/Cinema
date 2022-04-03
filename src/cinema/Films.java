@@ -20,7 +20,7 @@ public class Films {
    protected  String m_synopsis;
    protected  int m_IDmovie =-1 ; 
    byte[]m_photo =null;
-     // ajouter du le truc pour mettre les images
+     
 
     /**
      *

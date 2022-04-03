@@ -23,11 +23,13 @@ public class Cinema {
        CustomersDAO cust = new CustomersDAOImp();
        CustList=cust.getCustomers();
        ShowDAO sho =new ShowDAOImp();
-       ShowList=sho.getShow();
+      
        FilmDAO fil =new FilmDAOImp();
-       FilmList=fil.getFilm();      
+       FilmList=fil.getFilm();   
+        ShowList=sho.getShow();
        TicketDAOImp tick = new TicketDAOImp();
        TicketList = tick.getTick();
+    System.out.println("dddd");
     }
     
     
