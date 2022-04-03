@@ -155,7 +155,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="f0" red="f0" type="rgb"/>
                 </Property>
-                <Property name="rows" type="int" value="5"/>
+                <Property name="rows" type="int" value="5" postCode="System.out.println(film.getTitle());&#xa;System.out.println(sho.getDate());"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;Payment confirmed successfully.\n\nfind your order for &quot;+film.getTitle()+&quot; on &quot;+ sho.getDate() +&quot; below.\n \nAdditionally, if you wish:\nYour tickets can be emailed to you directly.&quot;" type="code"/>
                 </Property>

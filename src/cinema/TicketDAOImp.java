@@ -6,6 +6,7 @@
 
 package cinema;
 
+import Menu.Projet;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class TicketDAOImp implements TicketDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT * from ticket");
+            ResultSet result = stmt.executeQuery("SELECT * from `ticket`");
                                 
             while(result.next())
             {
@@ -53,9 +54,16 @@ public class TicketDAOImp implements TicketDAO{
             DataBase dataSource = new DataBase();
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
-            String sqlStatement = "INSERT INTO ticket (`ID_Ticket`, `date`, `price`, `nb_ticket`, `id_customer`, `id_show`) "
+            if(Projet.connectid>0){
+            String sqlStatement = "INSERT INTO `ticket` (`ID_Ticket`, `date`, `price`, `nb_ticket`, `id_customer`, `id_show`) "
                     + "VALUES ('" + ti.getIDTicket() + "', '" + ti.getDate() + "', '" + ti.getprice() + "', '" + ti.getnbTicket() + "', '" + ti.getCust().getIDCustomer() + "', '" + ti.getShow().getIDshow() + "');";
             stmt.executeUpdate(sqlStatement);
+            }else
+            {
+            String sqlStatement = "INSERT INTO `ticket` (`ID_Ticket`, `date`, `price`, `nb_ticket`, `id_customer`, `id_show`) "
+                    + "VALUES ('" + ti.getIDTicket() + "', '" + ti.getDate() + "', '" + ti.getprice() + "', '" + ti.getnbTicket() + "', '" + 1 + "', '" + ti.getShow().getIDshow() + "');";
+            stmt.executeUpdate(sqlStatement);
+            }
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -70,16 +78,15 @@ public class TicketDAOImp implements TicketDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT t.date, t.nb_ticket, t.id_customer, t.id_show" + "FROM ticket t " 
-                                + "INNER JOIN customer c ON c.id_customer=t.id_customer");
+            ResultSet result = stmt.executeQuery("SELECT * from `ticket` WHERE `ID_Ticket`= "+id);
                                 
             while(result.next())
-            {
-                for(int i=0; i < Cinema.ShowList.size();++i){
-                        if(Cinema.ShowList.get(i).m_IDshow == result.getInt(6)){
-                            Ticket ticketcusto = new Ticket(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.CustList.get(id), Cinema.ShowList.get(i));
-                        }
-                }
+            { ShowDAO sho = new ShowDAOImp();
+              CustomersDAO cust =new CustomersDAOImp(); 
+              Customers cus = cust.getCustomerId(result.getInt(5));
+              Show show = sho.getShowID(result.getInt(6));
+              Ticket ticketcusto = new Ticket(result.getInt(1) , result.getString(2), result.getInt(3), result.getInt(4),cus,show );
+                return ticketcusto;
             }
         } catch (SQLException e){
             System.out.println(e);

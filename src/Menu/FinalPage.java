@@ -5,15 +5,16 @@
  */
 package Menu;
 import cinema.*;
+import javax.mail.internet.*; 
+import java.util.Properties;  
+import javax.mail.*;  
 
 /**
  *
  * @author esmil
  */
 
-import javax.mail.internet.*; 
-import java.util.Properties;  
-import javax.mail.*;  
+
 class Mail {
   public static void send(String from,String pwd,String to,String sub,String msg){
     //Propriétés
@@ -117,6 +118,8 @@ public class FinalPage extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(240, 240, 0));
         jTextArea1.setRows(5);
+        System.out.println(film.getTitle());
+        System.out.println(sho.getDate());
         jTextArea1.setText("Payment confirmed successfully.\n\nfind your order for "+film.getTitle()+" on "+ sho.getDate() +" below.\n \nAdditionally, if you wish:\nYour tickets can be emailed to you directly.");
         jScrollPane1.setViewportView(jTextArea1);
 
