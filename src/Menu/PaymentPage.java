@@ -509,13 +509,18 @@ public class PaymentPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         int nbPlace = Integer.valueOf(nbPlaceCB.getSelectedItem().toString());
           java.security.SecureRandom random = new java.security.SecureRandom();
            int IdTicket = random.nextInt(100000) ;
         TicketDAO ti = new TicketDAOImp();
         Ticket ticket = new Ticket(IdTicket, m_date, nbPlace, Total,custo, show);
         ti.addTicket(ticket);
+        ShowDAO c = new ShowDAOImp();
+        show.setNbSeat(nbPlace);
+        c.UpdateSeat(show);
         FinalPage a = new FinalPage(IdTicket);
+        
         a.setVisible(true);
         this.setVisible(false);
 

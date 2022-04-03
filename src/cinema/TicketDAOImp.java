@@ -73,7 +73,7 @@ public class TicketDAOImp implements TicketDAO{
     @Override
     public Ticket getTick(int id)
     {
-        Connection conn = null;
+       Connection conn = null;
         try {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
@@ -85,7 +85,7 @@ public class TicketDAOImp implements TicketDAO{
               CustomersDAO cust =new CustomersDAOImp(); 
               Customers cus = cust.getCustomerId(result.getInt(5));
               Show show = sho.getShowID(result.getInt(6));
-              Ticket ticketcusto = new Ticket(result.getInt(1) , result.getString(2), result.getInt(3), result.getInt(4),cus,show );
+              Ticket ticketcusto = new Ticket(result.getInt(1) , result.getString(2), result.getInt(4), result.getInt(3),cus,show );
                 return ticketcusto;
             }
         } catch (SQLException e){
