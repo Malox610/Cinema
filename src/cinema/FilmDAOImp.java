@@ -24,7 +24,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT * FROM Movie WHERE `ID_movie` = " + id);
+            ResultSet result = stmt.executeQuery("SELECT * FROM movie WHERE `ID_movie` = " + id);
             while (result.next()) 
             {  // String title , String director , String genre , String time , int IDmovie // je sais pas ce que les result correspond a quoi
                 Films fil =new Films (result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
@@ -46,7 +46,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from Movie");
+            ResultSet result = stmt.executeQuery("select * from movie");
 
             while (result.next()) {//String title , String director , String genre , String time , int IDmovie , String synopsis
                 Films fil = new Films(result.getString(2) ,result.getString(3) , result.getString(4) ,result.getString(5), result.getInt(1),result.getString(6),result.getBytes(7));
@@ -68,7 +68,7 @@ public class FilmDAOImp implements FilmDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM Movie WHERE `Name` = " + title );
+            ResultSet result = stmt.executeQuery("SELECT ID_movie FROM movie WHERE `Name` = " + title );
             while (result.next()) 
             {  
         

@@ -75,7 +75,11 @@ public class TicketDAOImp implements TicketDAO{
                                 
             while(result.next())
             {
-                Ticket ticketcusto = new Ticket(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.CustList.get(5), Cinema.ShowList.get(6));
+                for(int i=0; i < Cinema.ShowList.size();++i){
+                        if(Cinema.ShowList.get(i).m_IDshow == result.getInt(6)){
+                            Ticket ticketcusto = new Ticket(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.CustList.get(id), Cinema.ShowList.get(i));
+                        }
+                }
             }
         } catch (SQLException e){
             System.out.println(e);

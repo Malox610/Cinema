@@ -27,16 +27,39 @@ public class ShowDAOImp implements ShowDAO {
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from `show`");
+            ResultSet result = stmt.executeQuery("select * from show");
 
-            while (result.next()) {
-                //int IDshow , String Date,int nbseat,int room ,int idmovie
-
+            while (result.next()) {//Int idshow , String date , int nbseat , int room , int IDmovie
+                for(int i=0; i < Cinema.FilmList.size();++i){
+                    if(Cinema.FilmList.get(i).getIDMovie() == result.getInt(5)){
+                        Show showe = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.FilmList.get(i));
+                        ShowList.add(showe);   
+                    }
+                }
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
         return ShowList;
+    }
+    
+    @Override
+    public ArrayList<Show> getShow(int id) {
+        ArrayList<Show> ShowList = new ArrayList<>();
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("SELECT * FROM show WHERE `ID_movie` = " + id);
+            while (result.next()) {//Int idshow , String date , int nbseat , int room , int IDmovie
+                    Show showe = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4), Cinema.FilmList.get(id));
+                    ShowList.add(showe);   
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+         return ShowList; 
     }
 
     @Override

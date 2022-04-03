@@ -14,11 +14,9 @@ import java.util.ArrayList;
 public interface ShowDAO {
 
     public ArrayList<Show> getShow();
-
+    public ArrayList<Show> getShow(int id);
     public void addShow(Show sho);
-
     public void deleteShow(Show sho);
-
     public void UpdateSeat(Show sho);
 
 }

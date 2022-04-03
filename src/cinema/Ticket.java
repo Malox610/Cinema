@@ -47,14 +47,17 @@ public class Ticket {
     {
     return m_Date ;
     }
+    
     int getnbTicket()
      {
          return m_nbTicket ;
      }
+    
     int getprice()
      {
          return m_price ;
      }
+    
     Customers getCust()
      {
          return m_Cust;
