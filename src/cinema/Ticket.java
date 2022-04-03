@@ -38,32 +38,32 @@ public class Ticket {
         m_Show=show;
     }
     
-     int getIDTicket()
+    public int getIDTicket()
      {
          return m_IDticket;
      }
      
-    String getDate()
+   public String getDate()
     {
     return m_Date ;
     }
     
-    int getnbTicket()
+   public int getnbTicket()
      {
          return m_nbTicket ;
      }
     
-    int getprice()
+  public  int getprice()
      {
          return m_price ;
      }
     
-    Customers getCust()
+  public  Customers getCust()
      {
          return m_Cust;
      }
 
-    Show getShow()
+   public Show getShow()
      {
          return m_Show;
      }

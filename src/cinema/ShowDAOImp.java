@@ -96,7 +96,7 @@ public class ShowDAOImp implements ShowDAO {
             con = dataSource.createConnection();
             Statement stmt = con.createStatement();
             String sqlStatement = "INSERT INTO `show` (`ID_show`, `date`, `nb_seat`, `room_number`, `id_Movie`) "
-                    + "VALUES ('" + sho.getIDshow() + "', '" + sho.getDate() + "', '" + sho.getNbSeat() + "', '" + sho.getRoom() + "', '" + sho.getIdMovie() + "');";
+                    + "VALUES ('" + sho.getIDshow() + "', '" + sho.getDate() + "', '" + sho.getNbSeat() + "', '" + sho.getRoom() + "', '" + sho.getMovie() + "');";
             stmt.executeUpdate(sqlStatement);
 
         } catch (SQLException e) {

@@ -52,7 +52,7 @@ public class Show {
      {
       return m_room ;
      }
-    public Films getIdMovie()
+    public Films getMovie()
      {
          return m_movie;
      }

@@ -43,7 +43,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="FilmDAO movie = new FilmDAOImp();&#xa;ShowDAO sho = new ShowDAOImp();&#xa;Show show =new Show();&#xa;&#xa;        Films Movie = new Films();&#xa;        Movie =movie.getFilmsID(m_id);&#xa;byte[] imagedata =Movie.getphoto();&#xa;        Format = new ImageIcon(imagedata);&#xa;show = sho.getShowID_Date(m_id, m_date);"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="byte[] imagedata =Movie.getphoto();&#xa;        Format = new ImageIcon(imagedata);"/>
       </AuxValues>
 
       <Layout>

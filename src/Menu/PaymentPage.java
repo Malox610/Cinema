@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Menu;
+
 import cinema.*;
 import cinema.Films;
 import javax.swing.ImageIcon;
@@ -13,22 +14,36 @@ import javax.swing.ImageIcon;
  * @author esmil
  */
 public class PaymentPage extends javax.swing.JFrame {
-           private final int  m_id;
-           private final String  m_date;
-           int price =0 ;
-           int promo =0 ; 
-           int Total =0;
-           public ImageIcon Format =null;
-           
+
+    private final int m_id;
+    private final String m_date;
+    int price = 0;
+    int promo = 0;
+    int Total = 0;
+    public ImageIcon Format = null;
+    Show show = new Show();
+    Films Movie = new Films();
+    Customers custo = new Customers();
+
     /**
      * Creates new form PaymentPage
      */
-    public PaymentPage(int idmovie,String Date) {
-         m_id=idmovie;
-         m_date=Date;
-         
-        initComponents();
+    public PaymentPage(int idmovie, String Date) {
+        m_id = idmovie;
+        m_date = Date;
+        FilmDAO movie = new FilmDAOImp();
+        ShowDAO sho = new ShowDAOImp();
         
+        if(Projet.connectid>0)
+        {   CustomersDAO cust = new CustomersDAOImp();
+            custo = cust.getCustomerId(Projet.connectid);
+        }
+        
+        Movie = movie.getFilmsID(m_id);
+        show = sho.getShowID_Date(m_id, m_date);
+
+        initComponents();
+
     }
 
     /**
@@ -40,15 +55,8 @@ public class PaymentPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        FilmDAO movie = new FilmDAOImp();
-        ShowDAO sho = new ShowDAOImp();
-        Show show =new Show();
-
-        Films Movie = new Films();
-        Movie =movie.getFilmsID(m_id);
         byte[] imagedata =Movie.getphoto();
         Format = new ImageIcon(imagedata);
-        show = sho.getShowID_Date(m_id, m_date);
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
@@ -501,10 +509,16 @@ public class PaymentPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        
-      this.setVisible(false);
-      
+        int nbPlace = Integer.valueOf(nbPlaceCB.getSelectedItem().toString());
+          java.security.SecureRandom random = new java.security.SecureRandom();
+           int IdTicket = random.nextInt(100000) ;
+        TicketDAO ti = new TicketDAOImp();
+        Ticket ticket = new Ticket(IdTicket, m_date, nbPlace, Total,custo, show);
+        ti.addTicket(ticket);
+        FinalPage a = new FinalPage(IdTicket);
+        a.setVisible(true);
+        this.setVisible(false);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -512,7 +526,7 @@ public class PaymentPage extends javax.swing.JFrame {
         MoviePage a = new MoviePage();
         a.setVisible(true);
         this.setVisible(false);
-       
+
         ///prout
     }//GEN-LAST:event_BackButtonActionPerformed
 
@@ -526,17 +540,16 @@ public class PaymentPage extends javax.swing.JFrame {
 
     private void nbPlaceCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbPlaceCBActionPerformed
         // TODO add your handling code here:
-     int nbPlace =Integer.valueOf(nbPlaceCB.getSelectedItem().toString());
-        int finprice=price*nbPlace;
-        jLabel4.setText(""+finprice);
-       Total= finprice-promo;
-        TotalPrice.setText(" "+Total);
+        int nbPlace = Integer.valueOf(nbPlaceCB.getSelectedItem().toString());
+        int finprice = price * nbPlace;
+        jLabel4.setText("" + finprice);
+        Total = finprice - promo;
+        TotalPrice.setText(" " + Total);
     }//GEN-LAST:event_nbPlaceCBActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -564,7 +577,7 @@ public class PaymentPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PaymentPage(0,"").setVisible(true);
+                new PaymentPage(0, "").setVisible(true);
             }
         });
     }

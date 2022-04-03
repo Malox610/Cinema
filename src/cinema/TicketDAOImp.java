@@ -70,7 +70,7 @@ public class TicketDAOImp implements TicketDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("SELECT t.date, t.nbticket, t.id_customer, t.id_show" + "FROM ticket t" 
+            ResultSet result = stmt.executeQuery("SELECT t.date, t.nb_ticket, t.id_customer, t.id_show" + "FROM ticket t " 
                                 + "INNER JOIN customer c ON c.id_customer=t.id_customer");
                                 
             while(result.next())
