@@ -62,7 +62,32 @@ public class ShowDAOImp implements ShowDAO {
         }
          return ShowList; 
     }
-
+    
+    
+    @Override
+    public Show getShowID_Date(int idmovie , String Date)
+    {
+     Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery("SELECT * FROM `show` WHERE `ID_movie` = " + idmovie + " AND `date`='"+Date+"'; " );
+            while (result.next()) 
+            {  // String title , String director , String genre , String time , int IDmovie // je sais pas ce que les result correspond a quoi
+                FilmDAO fil = new FilmDAOImp();
+                Show showe = new Show(result.getInt(1), result.getString(2), result.getInt(3), result.getInt(4),fil.getFilmsID(result.getInt(5)));
+                   
+                return showe ;
+                
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+         return new Show(); 
+    
+    }
+            
     @Override
     public void addShow(Show sho) {
         Connection con = null;

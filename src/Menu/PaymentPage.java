@@ -14,13 +14,15 @@ import javax.swing.ImageIcon;
  */
 public class PaymentPage extends javax.swing.JFrame {
            private final int  m_id;
+           private final String  m_date;
            public ImageIcon Format =null;
            
     /**
      * Creates new form PaymentPage
      */
-    public PaymentPage(int idmovie) {
+    public PaymentPage(int idmovie,String Date) {
          m_id=idmovie;
+         m_date=Date;
          
         initComponents();
         
@@ -36,11 +38,14 @@ public class PaymentPage extends javax.swing.JFrame {
     private void initComponents() {
 
         FilmDAO movie = new FilmDAOImp();
+        ShowDAO sho = new ShowDAOImp();
+        Show show =new Show();
 
         Films Movie = new Films();
         Movie =movie.getFilmsID(m_id);
         byte[] imagedata =Movie.getphoto();
         Format = new ImageIcon(imagedata);
+        show = sho.getShowID_Date(m_id, m_date);
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
@@ -129,10 +134,10 @@ public class PaymentPage extends javax.swing.JFrame {
         jSeparator1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         MovieName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        MovieName.setText("MOVIE NAME");
+        MovieName.setText(Movie.getTitle());
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel5.setText("Hour");
+        jLabel5.setText("Date: ");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel6.setText("Room");
@@ -152,9 +157,10 @@ public class PaymentPage extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel12.setText("Price");
 
-        HourTime.setText("jLabel17");
+        HourTime.setText(show.getDate());
 
-        RoomMovie.setText("jLabel18");
+        RoomMovie.setText(String.valueOf(show.getRoom())
+        );
 
         jLabel22.setText("€");
 
@@ -165,7 +171,7 @@ public class PaymentPage extends javax.swing.JFrame {
         TotalPrice.setText("jLabel25");
 
         MovieYear.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        MovieYear.setText("YEAR");
+        MovieYear.setText(String.valueOf(Movie.getIDMovie()));
 
         PriceChild.setText("jLabel19");
 
@@ -462,7 +468,7 @@ public class PaymentPage extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -580,7 +586,7 @@ public class PaymentPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PaymentPage(0).setVisible(true);
+                new PaymentPage(0,"").setVisible(true);
             }
         });
     }

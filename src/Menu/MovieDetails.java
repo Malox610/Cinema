@@ -85,7 +85,7 @@ public class MovieDetails extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
         String[] ShowDate= ShoLis.toArray(new String[ShoLis.size()]);
-        jComboBox1 = new javax.swing.JComboBox<>();
+        HourCB = new javax.swing.JComboBox<>();
         MyProfilbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -266,7 +266,7 @@ public class MovieDetails extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(ShowDate)
+        HourCB.setModel(new javax.swing.DefaultComboBoxModel<>(ShowDate)
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -294,7 +294,7 @@ public class MovieDetails extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(351, 351, 351)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(HourCB, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -309,7 +309,7 @@ public class MovieDetails extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addComponent(jLabel4)
                 .addGap(34, 34, 34)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(HourCB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(175, 175, 175))
@@ -446,7 +446,7 @@ public class MovieDetails extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        PaymentPage a = new PaymentPage(m_id);
+        PaymentPage a = new PaymentPage(m_id,HourCB.getSelectedItem().toString());
          a.setVisible(true);
       this.setVisible(false);
         
@@ -493,6 +493,7 @@ public class MovieDetails extends javax.swing.JFrame {
     private javax.swing.JButton Connexion;
     private javax.swing.JLabel DirectorMovie;
     private javax.swing.JLabel GenreMovie;
+    private javax.swing.JComboBox<String> HourCB;
     private javax.swing.JLabel MovieName;
     private javax.swing.JLabel MovieReview;
     private javax.swing.JButton MyProfilbtn;
@@ -500,7 +501,6 @@ public class MovieDetails extends javax.swing.JFrame {
     private javax.swing.JLabel YearMovie;
     private javax.swing.JLabel image;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

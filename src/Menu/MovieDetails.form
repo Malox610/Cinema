@@ -486,7 +486,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="351" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" min="-2" pref="265" max="-2" attributes="0"/>
+                                  <Component id="HourCB" min="-2" pref="265" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -506,7 +506,7 @@
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" min="-2" pref="59" max="-2" attributes="0"/>
+                          <Component id="HourCB" min="-2" pref="59" max="-2" attributes="0"/>
                           <EmptySpace pref="138" max="32767" attributes="0"/>
                           <Component id="jButton1" min="-2" pref="58" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
@@ -572,7 +572,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="HourCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(ShowDate)&#xa;    " type="code"/>
