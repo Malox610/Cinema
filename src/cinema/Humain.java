@@ -14,8 +14,7 @@ abstract public class Humain {
   protected String m_name ;
   protected String m_password;
   
-  public Humain(String name, String pass){};
-  public Humain(String pass){};
+  
   public Humain(){};
   
   public String getName(){ return m_name;}

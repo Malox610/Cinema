@@ -16,13 +16,29 @@ public class Employee extends Humain {
     String m_job;
     int m_IDEmployee =-1 ;
     
-    public Employee (int id, String Password, String job)
+    public Employee (int id, String job, String Password)
     {
         //create object for customer who are connected
-        super(Password);
+        this.m_password=Password;
         m_job=job;
         m_IDEmployee=id;
           
+    }
+
+    public String getM_job() {
+        return m_job;
+    }
+
+    public int getM_IDEmployee() {
+        return m_IDEmployee;
+    }
+
+    public String getM_name() {
+        return m_name;
+    }
+
+    public String getM_password() {
+        return m_password;
     }
     
     public Employee()

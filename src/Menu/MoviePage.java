@@ -19,9 +19,10 @@ public class MoviePage extends javax.swing.JFrame {
      */
     public MoviePage() {
         initComponents();
-        initComponents();
+       
          MyProfilebtn.setVisible(false);
            connexion.setVisible(false);
+           System.out.println(""+Projet.connectid);
         if(Projet.connectid>0)
         {
         MyProfilebtn.setVisible(true);
@@ -418,7 +419,7 @@ public class MoviePage extends javax.swing.JFrame {
                                 .addGap(106, 106, 106)
                                 .addComponent(Runtime1))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(82, 82, 82)
+                                .addGap(88, 88, 88)
                                 .addComponent(BoutonMovie1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()

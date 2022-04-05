@@ -20,7 +20,8 @@ public class Customers extends Humain {
     ArrayList<Ticket> TicketList = new ArrayList<>();
 
     public Customers() { //For guest 
-        super("","");
+        this.m_name="";
+        this.m_password="";
         this.m_age=0;
         this.m_email="";
         this.m_IdCustomers=0;
@@ -28,7 +29,9 @@ public class Customers extends Humain {
 
     public Customers(String name, String password, String email, int age, int id) {
         //create object for customer who are connected 
-        super(name, password);
+        
+        this.m_name=name;
+        this.m_password=password;
         m_email = email;
         m_age = age;
         m_IdCustomers = id;

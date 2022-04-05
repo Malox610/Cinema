@@ -158,7 +158,7 @@ public class EmployeeConnexion extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         boolean co = false;
-        do {
+        
           
             String login=JobText.getText();
             char [] password = PasswordBox.getPassword();
@@ -169,15 +169,21 @@ public class EmployeeConnexion extends javax.swing.JFrame {
        {
            pass+=c;//rajoue du chiffrage
        }
-            if(pass==employe.getPassword())
+            if(pass.equals(employe.getPassword()))
             {
             co=true;
             }
-        }while(co==false);
-           
-        Menu_Employee a = new Menu_Employee();
+            else
+            {
+            System.out.println("Wrong job/password");
+            }
+        if(co==true)
+        {
+         Menu_Employee a = new Menu_Employee();
         a.setVisible(true);
         this.setVisible(false);
+        }
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed
