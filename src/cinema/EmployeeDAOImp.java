@@ -5,6 +5,7 @@
  */
 package cinema;
 
+import Menu.Projet;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,10 +25,9 @@ public class EmployeeDAOImp implements EmployeeDAO{
             DataBase dataSource = new DataBase();
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from Customers where id = " + id);
+            ResultSet result = stmt.executeQuery("select * from `employee` where `ID_employee`  = '" + id+"';");
             while (result.next()) {            // String name , String Password , String job // je sais pas ca correspond a quoi
-                Employee emp =new Employee(result.getString(2) ,result.getString(2) , result.getString(3));
-                
+                 Employee emp = new Employee(result.getInt(1),result.getString(2) ,result.getString(3));
                 return emp;
                 
             }
@@ -36,7 +36,29 @@ public class EmployeeDAOImp implements EmployeeDAO{
         }
         return new Employee();
     }
-    
+        
+        public Employee getEmployeeConnexion( String job) {
+        Connection conn = null;
+        try {
+            DataBase dataSource = new DataBase();
+            conn = dataSource.createConnection();
+            Statement stmt = conn.createStatement();
+         //   String sqlquery ="SELECT * FROM customer WHERE `email` = '" + login + "' AND `password` = '" + password+"';";
+          String sqlquery ="SELECT * FROM `employee` WHERE `job` = '" + job +"';";
+            ResultSet result = stmt.executeQuery(sqlquery);
+              
+             while (result.next()) {// String name , String Password , String email , int age , int idcustomer
+             
+                 Employee emp = new Employee(result.getInt(1),result.getString(2) ,result.getString(3));
+             
+                return emp;
+             }
+            
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return new Employee();
+        }
     
 }
 

@@ -11,5 +11,6 @@ package cinema;
  */
 public interface EmployeeDAO {
     public Employee getEmployee(int id);
+     public Employee getEmployeeConnexion( String job);
     
 }

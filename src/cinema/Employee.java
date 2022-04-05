@@ -5,7 +5,7 @@
  */
 package cinema;
 
-import java.security.SecureRandom;
+
 
 /**
  *
@@ -16,13 +16,13 @@ public class Employee extends Humain {
     String m_job;
     int m_IDEmployee =-1 ;
     
-    public Employee (String name, String Password, String job)
+    public Employee (int id, String Password, String job)
     {
         //create object for customer who are connected
-        super(name,Password);
+        super(Password);
         m_job=job;
-         SecureRandom random = new SecureRandom();
-         m_IDEmployee= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja            
+        m_IDEmployee=id;
+          
     }
     
     public Employee()

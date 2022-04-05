@@ -20,8 +20,8 @@ public class Cinema {
     
     public Cinema()
     {
-       CustomersDAO cust = new CustomersDAOImp();
-       CustList=cust.getCustomers();
+     /*  CustomersDAO cust = new CustomersDAOImp();
+       CustList=cust.getCustomers();*/
        ShowDAO sho =new ShowDAOImp();
       
        FilmDAO fil =new FilmDAOImp();

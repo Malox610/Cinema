@@ -8,6 +8,9 @@ package cinema;
 import Menu.*;
 import java.sql.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -101,7 +104,7 @@ public class CustomersDAOImp implements CustomersDAO {
          //   String sqlquery ="SELECT * FROM customer WHERE `email` = '" + login + "' AND `password` = '" + password+"';";
           String sqlquery ="SELECT * FROM customer WHERE `email` = '" + login +"';";
             ResultSet result = stmt.executeQuery(sqlquery);
-              
+             
              while (result.next()) {// String name , String Password , String email , int age , int idcustomer
                  String mdp =result.getString(4);
         char[] ch =mdp.toString().toCharArray();
@@ -162,10 +165,16 @@ public class CustomersDAOImp implements CustomersDAO {
                 Projet.connectid =result.getInt(1);
                 return cust;
              }
+              if(result.next()==false)
+              {
+            // JOptionPane.showMessageDialog(null, "Wrong user/password", "OK", JOptionPane.YES_OPTION);
+                  System.out.println("Error wrong Login/password");
+              }
             
         } catch (SQLException e) {
             System.out.println(e);
         }
+        
         return new Customers();
     }
 
