@@ -9,9 +9,10 @@ package cinema;
  *
  * @author esmil
  */
-abstract public class Humain {
+abstract public class Humain {//classe mère (abstraite) de employé et client
+
     
-  protected String m_name ;
+  protected String m_name ;//attributs
   protected String m_password;
   
   

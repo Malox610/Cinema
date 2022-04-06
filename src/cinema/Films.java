@@ -12,26 +12,28 @@ import javax.swing.ImageIcon;
  *
  * @author esmil
  */
-public class Films {
-   protected  String m_title;
+public class Films {//classe film
+   protected  String m_title;//attributs
    protected  String m_director;
    protected  String m_genre;
    protected  String m_time;
    protected  String m_synopsis;
    protected  int m_IDmovie =-1 ; 
-   byte[]m_photo =null;
+   byte[]m_photo =null;//image stockée en base de données
+
      
 
     /**
      *
      */
-    public Films()
+    public Films()//constructeur par défaut vide car pas possible
     {
       
     }
+     //constructeur par paramètres
     public Films (String title , String director , String genre , String time , int IDmovie , String synopsis,byte[]photo )
     {
-        //create object for customer who are connected 
+        
         
          m_title= title ;
          m_director=director;

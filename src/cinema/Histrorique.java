@@ -9,15 +9,15 @@ package cinema;
  *
  * @author esmil
  */
-public class Histrorique {
-    int m_idTicket;
+public class Histrorique {//classe historique de commande
+    int m_idTicket; //Attributs
     String m_Date ;
     int m_nbTicket;
     Customers m_cust;
     Films m_film;
     
     
-    public Histrorique()
+    public Histrorique()//constructeur par défaut
     {
         m_idTicket=0;
      m_Date ="";
@@ -28,7 +28,7 @@ public class Histrorique {
     }
     
     
-     
+      //constructeur par paramètres
     public Histrorique(int idTicket,String Date , int nbTicket , int idCust,int IdShow)
     {
         m_idTicket=idTicket;
@@ -42,7 +42,7 @@ public class Histrorique {
 
      
     }
-
+//getters
     public String getM_Date() {
         return m_Date;
     }

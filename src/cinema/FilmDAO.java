@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author esmil
  */
-public interface FilmDAO {
+public interface FilmDAO {//interface de la classe et des méthodes servant aux interactions avec la base de données
     
     public Films getFilmsID(int id);
     public ArrayList<Films> getFilm() ;

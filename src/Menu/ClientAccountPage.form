@@ -40,7 +40,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="ArrayList&lt;Histrorique&gt; histo =new ArrayList&lt;&gt;();&#xa;HistroriqueDAO h  = new HistroriqueDAOImp();&#xa;histo= h.getHistorique();"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="System.out.println(&quot;ddd&quot;);&#xa;ArrayList&lt;Histrorique&gt; histo =new ArrayList&lt;&gt;();&#xa;HistroriqueDAO h  = new HistroriqueDAOImp();&#xa;histo= h.getHistorique();"/>
       </AuxValues>
 
       <Layout>

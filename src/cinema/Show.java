@@ -11,19 +11,19 @@ import javax.swing.JOptionPane;
  *
  * @author esmil
  */
-public class Show {
-    protected int m_IDshow;
+public class Show {//classe des séances
+    protected int m_IDshow;//attributs
     protected String m_Date;
     protected int m_nbseat;
     protected int m_room ;
     protected Films m_movie;
     
-    public Show()
+    public Show()//onstructeur par défaut 
     {
     
     }
     
-    public Show( int IDshow , String Date,int nbseat,int room ,Films idmovie)
+    public Show( int IDshow , String Date,int nbseat,int room ,Films idmovie)//constructeur par paramètre
     {
         m_IDshow=IDshow;
         m_Date= Date;
@@ -33,6 +33,7 @@ public class Show {
     
     }
     
+    //getters
      public int getIDshow()
      {
          return m_IDshow;
@@ -56,7 +57,7 @@ public class Show {
      {
          return m_movie;
      }
-    
+    //setters
   public  void setNbSeat(int nbticket)
     {
         int newnombre=m_nbseat-nbticket;
@@ -64,7 +65,7 @@ public class Show {
         {
         m_nbseat=newnombre;
         
-        }else
+        }else // condition pas possible pour commander ses tickets
         {
          JOptionPane.showMessageDialog(null, "You have taken too much ticket");
         }

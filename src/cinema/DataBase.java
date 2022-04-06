@@ -20,11 +20,11 @@ public class DataBase {
      Connection con = null;
  
     
-    public Connection createConnection()
+    public Connection createConnection()//connexion avec la database
     {
         try
         {
-            String URL = "jdbc:mysql://localhost:3306/cinebdd";
+            String URL = "jdbc:mysql://localhost:3306/cinebdd";//chargement de la page phpmyadmin
             String login = "root";
             String password = "";
             con=DriverManager.getConnection(URL, login, password);
@@ -35,7 +35,7 @@ public class DataBase {
         }
         return con;
     }
-    public void filen()
+    public void filen()//méthode de recup et chargement d'images depuis la base de données
     {
         try{
         JFileChooser chooser = new JFileChooser();

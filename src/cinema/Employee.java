@@ -11,12 +11,12 @@ package cinema;
  *
  * @author esmil
  */
-public class Employee extends Humain {
+public class Employee extends Humain {//classe employé hérité de humain
     
-    String m_job;
+    String m_job;//atributs
     int m_IDEmployee =-1 ;
     
-    public Employee (int id, String job, String Password)
+    public Employee (int id, String job, String Password)//constructeur avec paramètres
     {
         //create object for customer who are connected
         this.m_password=Password;
@@ -25,23 +25,23 @@ public class Employee extends Humain {
           
     }
 
-    public String getM_job() {
+    public String getM_job() {//getters
         return m_job;
     }
 
-    public int getM_IDEmployee() {
+    public int getM_IDEmployee() {//getters
         return m_IDEmployee;
     }
 
-    public String getM_name() {
+    public String getM_name() {//getters
         return m_name;
     }
 
-    public String getM_password() {
+    public String getM_password() {//getters
         return m_password;
     }
     
-    public Employee()
+    public Employee()//constructeur par défaut inexstant car pas possible
     {
     }
 }

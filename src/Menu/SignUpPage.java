@@ -199,84 +199,82 @@ public class SignUpPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SignUPbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUPbuttonActionPerformed
+        //dans le formulaire pour créer un compte
         String pass = "";
         String pass2 = "";
         String newName;
         String newMail;
         int newAge;
+        boolean co = false;
 
-        do {
-            pass = "";
-            pass2 = "";
+        pass = "";
+        pass2 = "";
 
-            newName = NameBox.getText();
-            newMail = EmailBox.getText();
-            newAge = (int) AgeSpinner.getValue();
-            char[] newPassword = PasswordBox.getPassword();
-            char[] newPasswordConfirm = ConfirmBox.getPassword();
+        newName = NameBox.getText();// les différents champs à remplir pour créer un compte
+        newMail = EmailBox.getText();
+        newAge = (int) AgeSpinner.getValue();
+        char[] newPassword = PasswordBox.getPassword();
+        char[] newPasswordConfirm = ConfirmBox.getPassword();
 
-            for (char c : newPassword) {
-                pass += c;
-            }
-            for (char c : newPasswordConfirm) {
-                pass2 += c;
-            }
-            if (pass.equals(pass2) == false) {
-                JOptionPane.showMessageDialog(null, "This is not the same password");
-            }
-
-        } while (pass == pass2);
-        int IdCustomers = -1;
-        do {
-            SecureRandom random = new SecureRandom();
-            IdCustomers = random.nextInt(100000) ;
-        } while (IdCustomers < 0);
-        
-        SecureRandom random2=new SecureRandom();
-        boolean randclé =random2.nextBoolean();
-        String Xclé="" ;
-        String Xclé2="" ;
-        if(randclé ==true)
-        {
-       Xclé2 ="1" ;
+        for (char c : newPassword) {
+            pass += c;
         }
-       if(randclé ==true)
-        {
-       Xclé2 ="0" ;
+        for (char c : newPasswordConfirm) {
+            pass2 += c;
         }
-       int randclé2 =random2.nextInt(10);
-       Xclé=String.valueOf(randclé2);
-       pass=Xclé+Xclé2+pass;
-        char[] ch =pass.toString().toCharArray();
-         int clé = ch[0];
-        int clé2 =ch[1];
-       
-        System.out.println(clé);
-        
-        for(int j =2 ; j<ch.length ; j++)
-        {
-            if(clé2==49)
-            { 
-                ch[j] =(char)((int)ch[j]+clé); 
-            }else if(clé2==48)
-            {
-            ch[j] =(char)((int)ch[j]-clé); 
-            }
-          
-        System.out.println(ch[j]+ "-->"+(int)ch[j]);
+        if (pass.equals(pass2) == false) {//si le mot de passe et la confirmation du mot de passe ne matchent pas
+            JOptionPane.showMessageDialog(null, "This is not the same password");
+        } else {
+            co = true;
         }
-        String chiffre ="";
-      for(char c : ch)
-       {
-           chiffre+=c;//rajoue du chiffrage
-       }
-        CustomersDAO cust = new CustomersDAOImp();
-        cust.addCustomers(new Customers(newName, chiffre, newMail, newAge, IdCustomers));
-        Projet.connectid = IdCustomers;
-        WelcomePage a = new WelcomePage();
-        a.setVisible(true);
-        this.setVisible(false);
 
+        if (co == true) {
+            int IdCustomers = -1;
+            do {
+                SecureRandom random = new SecureRandom();//objet pour un nombre aléatoire
+                IdCustomers = random.nextInt(100000); //on affecte un id aléatoire au client entre 0 et 100 000
+            } while (IdCustomers < 0); //tant qu'un id n'a pas été donné au client
+
+            SecureRandom random2 = new SecureRandom();
+            boolean randclé = random2.nextBoolean();//generation de la clé 2
+            String Xclé = "";
+            String Xclé2 = "";
+            if (randclé == false) {
+                Xclé2 = "1";
+            }
+            if (randclé == true) {
+                Xclé2 = "0";
+            }
+            int randclé2 = random2.nextInt(10);
+            Xclé = String.valueOf(randclé2);
+            pass = Xclé + Xclé2 + pass;
+            char[] ch = pass.toCharArray();
+            int clé = ch[0];
+            int clé2 = ch[1];
+
+            System.out.println(clé);
+
+            for (int j = 2; j < ch.length; j++) {
+                if (clé2 == 49) {
+                    ch[j] = (char) ((int) ch[j] + clé);
+                } else if (clé2 == 48) {
+                    ch[j] = (char) ((int) ch[j] - clé);
+                }
+
+                System.out.println(ch[j] + "-->" + (int) ch[j]);
+            }
+            String chiffre = "";
+            for (char c : ch) {
+                chiffre += c;//rajoue du chiffrage
+            }
+            CustomersDAO cust = new CustomersDAOImp();
+            cust.addCustomers(new Customers(newName, chiffre, newMail, newAge, IdCustomers));
+            Projet.connectid = IdCustomers;
+            WelcomePage a = new WelcomePage();
+            a.setVisible(true); //une fois connecté on renvoie vers la welcome page
+            this.setVisible(false); //et on désaffiche la page actuelle
+
+        }
 
     }//GEN-LAST:event_SignUPbuttonActionPerformed
 
@@ -290,7 +288,7 @@ public class SignUpPage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         WelcomePage a = new WelcomePage();
+        WelcomePage a = new WelcomePage();
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed

@@ -200,19 +200,19 @@ public class SignInPage extends javax.swing.JFrame {
 
         boolean conn = false;
    
-            String clienttmail = Mail.getText();
-            char[] clientpassword = password.getPassword();
-            String pass = "";
+            String clienttmail = Mail.getText();// l'utilisateur rentre son mail
+            char[] clientpassword = password.getPassword();// son mot de passe
+                      String pass = "";
             for (char c : clientpassword) {
-                pass += c;//rajoue du chiffrage
+                pass += c;
             }
             CustomersDAO cust = new CustomersDAOImp();
 
             Customers cus = new Customers();
             cus = cust.getCustomersConnexion(clienttmail, pass);
-            if (cus.getAge() > 0) {
-                conn = true;
-            } else {
+            if (cus.getAge() > 0) {//si le client existe
+                conn = true; //il s'est bien connecté
+            } else { //si l'utilisateur n'existe pas
                 JFrame frame = new JFrame();
                 JOptionPane.showMessageDialog(
                         frame,
@@ -221,23 +221,24 @@ public class SignInPage extends javax.swing.JFrame {
                         JOptionPane.WARNING_MESSAGE
                        
                 ); 
-                conn=false;
+                conn=false;// le booléen connexion est faux car pas connecté
             }
 
         
-        if(conn==true)
+        if(conn==true)//si la connexion est bonne
         {     
-            WelcomePage a = new WelcomePage();
-        a.setVisible(true);
-        this.setVisible(false);
+            WelcomePage a = new WelcomePage();// on renvoie à la page welcome
+        a.setVisible(true);//on affiche la page welcome
+        this.setVisible(false);//on enlève la page actuelle
         }
     }//GEN-LAST:event_ConnexionButtonActionPerformed
 
     private void CreerComptePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreerComptePasswordActionPerformed
         // TODO add your handling code here:
-        SignUpPage a = new SignUpPage();
-        a.setVisible(true);
-        this.setVisible(false);
+          // si l'utilisateur veut créer un compte
+        SignUpPage a = new SignUpPage();// on charge la page sign up pour s'inscrire
+        a.setVisible(true);  // on affiche la page
+        this.setVisible(false); // on enlève la page actuelle
     }//GEN-LAST:event_CreerComptePasswordActionPerformed
 
     /**

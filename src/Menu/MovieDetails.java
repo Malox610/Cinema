@@ -21,13 +21,14 @@ public class MovieDetails extends javax.swing.JFrame {
      */
     public MovieDetails(int idmovie) {
         m_id=idmovie;
-        initComponents();
-         MyProfilbtn.setVisible(false);
+        initComponents();//on charge les composants du front
+         MyProfilbtn.setVisible(false);//de base on afficher des deux boutons
            Connexion.setVisible(false);
-        if(Projet.connectid>0)
+        if(Projet.connectid>0)//si utilisateur connecté
         {
-        MyProfilbtn.setVisible(true);
-       Connexion.setVisible(false);
+        //on affiche le bouton my profile
+         MyProfilbtn.setVisible(true);
+       Connexion.setVisible(false); //on affiche pas le bouton connexion
         }
         else
         {

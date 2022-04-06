@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author esmil
  */
-public interface ShowDAO {
+public interface ShowDAO {//classe interface pour intéragir entre base de données et les séances
 
     public ArrayList<Show> getShow();
     public ArrayList<Show> getShow(int id);

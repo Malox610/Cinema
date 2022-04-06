@@ -9,12 +9,15 @@ package cinema;
  *
  * @author thomas
  */
-
 import java.util.ArrayList;
 
-public interface TicketDAO {
+public interface TicketDAO {//classe interface Ticket pour la classe qui va intéragir avec la base de données
+
     public ArrayList<Ticket> getTick();
+
     public Ticket getTick(int id);
+
     public void addTicket(Ticket ti);
+
     public void modifTicket(Ticket ti);
 }

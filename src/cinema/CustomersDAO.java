@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author esmil
  */
-public interface CustomersDAO {
+public interface CustomersDAO { //Interface DAO pour clients
 
     public Customers getCustomersConnexion(String login, String password);
     public Customers getCustomerId(int id);

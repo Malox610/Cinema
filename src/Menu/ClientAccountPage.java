@@ -20,7 +20,8 @@ public class ClientAccountPage extends javax.swing.JFrame {
      * Creates new form ClientAccountPage
      */
     public ClientAccountPage() {
-        initComponents();
+        
+        initComponents();//on charge les composants du front
     }
 
     /**
@@ -32,6 +33,7 @@ public class ClientAccountPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        System.out.println("ddd");
         ArrayList<Histrorique> histo =new ArrayList<>();
         HistroriqueDAO h  = new HistroriqueDAOImp();
         histo= h.getHistorique();

@@ -18,15 +18,16 @@ import java.sql.Statement;
 public class EmployeeDAOImp implements EmployeeDAO{
     
         @Override
-        public Employee getEmployee(int id)
+        public Employee getEmployee(int id) //retourne le bon employé à partir de l'id de l'employé en paramètre
     {
         Connection conn = null;
         try {
-            DataBase dataSource = new DataBase();
+            DataBase dataSource = new DataBase(); //connexion avec la base de donnée
             conn = dataSource.createConnection();
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("select * from `employee` where `ID_employee`  = '" + id+"';");
-            while (result.next()) {            // String name , String Password , String job // je sais pas ca correspond a quoi
+            ResultSet result = stmt.executeQuery("select * from `employee` where `ID_employee`  = '" + id+"';");//requête SQL pour afficher le bon employé
+            while (result.next()) {            // String name , String Password , String job
+                  //récupération des données associées à l'employé qui a cette id
                  Employee emp = new Employee(result.getInt(1),result.getString(2) ,result.getString(3));
                 return emp;
                 
@@ -37,7 +38,7 @@ public class EmployeeDAOImp implements EmployeeDAO{
         return new Employee();
     }
         
-        public Employee getEmployeeConnexion( String job) {
+        public Employee getEmployeeConnexion( String job) {//connexion d'un employé sur l'interface via son job  
         Connection conn = null;
         try {
             DataBase dataSource = new DataBase();

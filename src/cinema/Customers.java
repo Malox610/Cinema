@@ -12,14 +12,14 @@ import java.util.ArrayList;
  *
  * @author esmil
  */
-public class Customers extends Humain {
+public class Customers extends Humain { //classe client héritant de Humain
 
-    String m_email;
+    String m_email; //attributs de la classe client
     int m_age;
     int m_IdCustomers = -1;
-    ArrayList<Ticket> TicketList = new ArrayList<>();
+    ArrayList<Ticket> TicketList = new ArrayList<>(); //chaque client aura une liste de ticket attaché
 
-    public Customers() { //For guest 
+    public Customers() { //pour les invités sans compte
         this.m_name="";
         this.m_password="";
         this.m_age=0;
@@ -27,27 +27,26 @@ public class Customers extends Humain {
         this.m_IdCustomers=0;
     }
 
-    public Customers(String name, String password, String email, int age, int id) {
-        //create object for customer who are connected 
-        
+    public Customers(String name, String password, String email, int age, int id) {  //pour les clients avec un compte
+
         this.m_name=name;
         this.m_password=password;
         m_email = email;
         m_age = age;
         m_IdCustomers = id;
         /*  SecureRandom random = new SecureRandom();
-         m_IdCustomers= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja 
+         m_IdCustomers= random.nextInt(); // besoin de verifier s'il cette ID n'existe pas deja
          */
     }
 
 
-    public void setPassword(String pass) {
-        
-        SecureRandom random2 = new SecureRandom();
+    public void setPassword(String pass) { //fonction qui implémente et chiffre le mot de passe des clients
+
+        SecureRandom random2 = new SecureRandom(); //déclaration d'un objet pour chiffrer les mdp
         boolean randclé = random2.nextBoolean();
-        String Xclé = "";
-        String Xclé2 = "";
-        if (randclé == true) {
+        String Xclé = ""; //première clé de chiffrage
+        String Xclé2 = ""; //deuxième clé de chiffrage
+        if (randclé == false) {
             Xclé2 = "1";
         }
         if (randclé == true) {

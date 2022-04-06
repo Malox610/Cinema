@@ -18,20 +18,20 @@ public class MoviePage extends javax.swing.JFrame {
      * Creates new form MoviePage
      */
     public MoviePage() {
-        initComponents();
+        initComponents();//on charge les composants du front
        
-         MyProfilebtn.setVisible(false);
+         MyProfilebtn.setVisible(false);//de base on afficher des deux boutons
            connexion.setVisible(false);
            System.out.println(""+Projet.connectid);
-        if(Projet.connectid>0)
+        if(Projet.connectid>0) // si client connecté
         {
-        MyProfilebtn.setVisible(true);
-      connexion.setVisible(false);
+        MyProfilebtn.setVisible(true);//on affiche que le bouton my profile
+      connexion.setVisible(false);// on garde non affiché le bouton connexion
         }
         else
         {
-       MyProfilebtn.setVisible(false);
-       connexion.setVisible(true);
+       MyProfilebtn.setVisible(false);// on garde non affiché le bouton connexion
+       connexion.setVisible(true);//on affiche que le bouton connexion
         }
 
     }

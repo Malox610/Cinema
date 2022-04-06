@@ -28,19 +28,20 @@ public class PaymentPage extends javax.swing.JFrame {
     /**
      * Creates new form PaymentPage
      */
-    public PaymentPage(int idmovie, String Date) {
+    public PaymentPage(int idmovie, String Date) {//on lance la page de paiement avec le film et l'horaire choisi en paramètre
+        
         m_id = idmovie;
         m_date = Date;
         FilmDAO movie = new FilmDAOImp();
         ShowDAO sho = new ShowDAOImp();
         
-        if(Projet.connectid>0)
+        if(Projet.connectid>0)//si l'utilisateur existe, on créé objet client correspondant à son id
         {   CustomersDAO cust = new CustomersDAOImp();
             custo = cust.getCustomerId(Projet.connectid);
         }
         
-        Movie = movie.getFilmsID(m_id);
-        show = sho.getShowID_Date(m_id, m_date);
+        Movie = movie.getFilmsID(m_id);//on créé un objet correspondant à l'id du film
+        show = sho.getShowID_Date(m_id, m_date);//on créé un objet correspondant à l'id du show et à l'horaire
 
         initComponents();
 
@@ -532,7 +533,7 @@ public class PaymentPage extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
 
-        ///prout
+      
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
