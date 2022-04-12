@@ -16,7 +16,7 @@ public interface ShowDAO {//classe interface pour int√©ragir entre base de donn√
     public ArrayList<Show> getShow();
     public ArrayList<Show> getShow(int id);
     public Show getShowID_Date(int idmovie , String Date);
-     public Show getShowID(int id );
+    public Show getShowID(int id );
     public void addShow(Show sho);
     public void deleteShow(Show sho);
     public void UpdateSeat(Show sho);
